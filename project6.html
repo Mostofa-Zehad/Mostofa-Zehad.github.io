@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Project 6 - Grid-Connected PV Microgrid with Battery Storage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<header id="header">
+  <a href="index.html" class="title">Project 6</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="generic.html">Education</a></li>
+      <li><a href="work.html">Work Experience</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <h1 class="major">Grid-Connected PV Microgrid with Battery Storage</h1>
+
+      <p>This project explores the conceptualization, design, and simulation of a grid-connected photovoltaic (PV) microgrid integrated with battery storage. Built in PSCAD, the system aims to deliver seamless power by leveraging solar energy during the day and battery discharge during the night. Through optimized power electronics and controller design, the model demonstrates a technically stable and economically viable solution for distributed renewable energy deployment.</p>
+
+      <!-- 1. System Overview -->
+      <h2>1. System Overview</h2>
+      <p>The proposed microgrid consists of a 45 kW PV array connected to the grid through smart converters, a battery bank capable of supplying 140 kWh over 12 hours, and dynamic load-handling capability. The system operates in two distinct modes: daytime solar supply and nighttime battery discharge, effectively creating a 24-hour clean energy cycle. Key hardware includes 132 SPR-X-21-345 PV panels and 390 batteries rated at 48V, 10Ah each.</p>
+      <p style="text-align: center;"><img src="images/p6_microgrid_diagram.png" alt="Microgrid System Design" style="max-width: 60%;" /></p>
+
+      <!-- 2. Power Conversion Stages -->
+      <h2>2. Power Electronics and Converter Design</h2>
+      <p>To ensure stable power conversion, the microgrid uses a three-stage converter configuration:</p>
+      <ul>
+        <li><strong>Boost Converter:</strong> Steps up PV voltage to a regulated level for efficient grid injection.</li>
+        <li><strong>Buck-Boost Converter:</strong> Enables flexible control of the battery—charging when solar surplus exists and discharging during load demand.</li>
+        <li><strong>Active Rectifier:</strong> Smooths AC voltage and current delivered to local loads, ensuring waveform purity.</li>
+      </ul>
+      <p>Each converter was precisely tuned using Bode plot analysis to maintain acceptable phase margin and avoid instability during load switching.</p>
+      <p style="text-align: center;"><img src="images/p6_bode_boost.png" alt="Boost Bode Plot" style="max-width: 60%;" /></p>
+
+      <!-- 3. Battery Storage -->
+      <h2>3. Battery Storage Strategy</h2>
+      <p>Battery sizing was conducted based on a 12-hour nighttime consumption model. A total of 140 kWh was required to support off-sunload periods, leading to the selection of 390 batteries. These batteries store energy during solar production peaks and discharge overnight, enabling uninterrupted power delivery without reliance on the grid.</p>
+      <p style="text-align: center;"><img src="images/p6_battery_soc.png" alt="Battery SOC" style="max-width: 60%;" /></p>
+
+      <!-- 4. Simulation Insights -->
+      <h2>4. Simulation Performance & Operational Flow</h2>
+      <p>Dynamic simulations in PSCAD validated the system's real-time performance under varying irradiance and demand cycles. Key insights include:</p>
+      <ul>
+        <li><strong>PV Output:</strong> Accurately tracks solar peaks, contributing to daytime load directly.</li>
+        <li><strong>Battery Operation:</strong> Demonstrates clean charge/discharge cycles — Charging: 9–13s and 33–35s; Discharging: 0–9s, 14–33s, 38–48s.</li>
+        <li><strong>Inverter Output:</strong> Maintains a stable three-phase voltage profile, essential for load consistency.</li>
+      </ul>
+      <p style="text-align: center;"><img src="images/p6_inverter_output.png" alt="Inverter Output" style="max-width: 60%;" /></p>
+
+      <!-- 5. Economic Evaluation -->
+      <h2>5. Economic Feasibility</h2>
+      <p>A detailed economic assessment shows the total system cost to be approximately $118,000. Based on annual energy output of 101,545 kWh and electricity rates of $0.12/kWh, the project yields the following results:</p>
+      <ul>
+        <li><strong>Annual Energy Savings:</strong> $26,981.32</li>
+        <li><strong>Simple Payback Period:</strong> 4.37 years</li>
+        <li><strong>Return on Investment:</strong> 22.88%</li>
+      </ul>
+      <p>These metrics suggest a financially compelling investment, particularly in off-grid or developing regions with high energy costs.</p>
+
+      <!-- 6. Conclusion -->
+      <h2>6. Conclusion & Replicability</h2>
+      <p>This PSCAD-based PV microgrid provides a strong case for hybrid renewable energy systems with integrated storage. Its two-mode operation, robust converter control, and cost-effectiveness make it highly adaptable to both rural electrification and commercial backup scenarios. With proven technical and economic viability, this model is a scalable blueprint for future clean energy deployments.</p>
+
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper alt">
+  <div class="inner">
+    <ul class="menu">
+      <li>&copy; 2025 Kazi Zehad Mostofa. All rights reserved.</li>
+      <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
