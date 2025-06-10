@@ -34,7 +34,7 @@
       <p>The proposed microgrid consists of a 45 kW PV array connected to the grid through smart converters, a battery bank capable of supplying 140 kWh over 12 hours, and dynamic load-handling capability. The system operates in two distinct modes: daytime solar supply and nighttime battery discharge, effectively creating a 24-hour clean energy cycle. Key hardware includes 132 SPR-X-21-345 PV panels and 390 batteries rated at 48V, 10Ah each.</p>
       <p style="text-align: center;"><img src="images/p6_microgrid_diagram.png" alt="Microgrid System Design" style="max-width: 60%;" /></p>
 
-      <!-- 2. Power Conversion Stages -->
+      <!-- 2. Power Electronics and Converter Design -->
       <h2>2. Power Electronics and Converter Design</h2>
       <p>To ensure stable power conversion, the microgrid uses a three-stage converter configuration:</p>
       <ul>
@@ -45,12 +45,12 @@
       <p>Each converter was precisely tuned using Bode plot analysis to maintain acceptable phase margin and avoid instability during load switching.</p>
       <p style="text-align: center;"><img src="images/p6_bode_boost.png" alt="Boost Bode Plot" style="max-width: 60%;" /></p>
 
-      <!-- 3. Battery Storage -->
+      <!-- 3. Battery Storage Strategy -->
       <h2>3. Battery Storage Strategy</h2>
       <p>Battery sizing was conducted based on a 12-hour nighttime consumption model. A total of 140 kWh was required to support off-sunload periods, leading to the selection of 390 batteries. These batteries store energy during solar production peaks and discharge overnight, enabling uninterrupted power delivery without reliance on the grid.</p>
       <p style="text-align: center;"><img src="images/p6_battery_soc.png" alt="Battery SOC" style="max-width: 60%;" /></p>
 
-      <!-- 4. Simulation Insights -->
+      <!-- 4. Simulation Performance & Operational Flow -->
       <h2>4. Simulation Performance & Operational Flow</h2>
       <p>Dynamic simulations in PSCAD validated the system's real-time performance under varying irradiance and demand cycles. Key insights include:</p>
       <ul>
@@ -59,8 +59,9 @@
         <li><strong>Inverter Output:</strong> Maintains a stable three-phase voltage profile, essential for load consistency.</li>
       </ul>
       <p style="text-align: center;"><img src="images/p6_inverter_output.png" alt="Inverter Output" style="max-width: 60%;" /></p>
+      <p style="text-align: center;"><img src=\"images/p6_power_flow_plot.png\" alt=\"PV, Battery, and Load Power Plot\" style=\"max-width: 70%;\" /></p>
 
-      <!-- 5. Economic Evaluation -->
+      <!-- 5. Economic Feasibility -->
       <h2>5. Economic Feasibility</h2>
       <p>A detailed economic assessment shows the total system cost to be approximately $118,000. Based on annual energy output of 101,545 kWh and electricity rates of $0.12/kWh, the project yields the following results:</p>
       <ul>
@@ -70,7 +71,7 @@
       </ul>
       <p>These metrics suggest a financially compelling investment, particularly in off-grid or developing regions with high energy costs.</p>
 
-      <!-- 6. Conclusion -->
+      <!-- 6. Conclusion & Replicability -->
       <h2>6. Conclusion & Replicability</h2>
       <p>This PSCAD-based PV microgrid provides a strong case for hybrid renewable energy systems with integrated storage. Its two-mode operation, robust converter control, and cost-effectiveness make it highly adaptable to both rural electrification and commercial backup scenarios. With proven technical and economic viability, this model is a scalable blueprint for future clean energy deployments.</p>
 
@@ -99,3 +100,4 @@
 
 </body>
 </html>
+
