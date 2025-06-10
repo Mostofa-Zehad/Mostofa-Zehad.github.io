@@ -56,32 +56,38 @@
 
       <!-- Power Output -->
       <h2>4. Power Output & Performance</h2>
-      <p>The system produces 1,180,219 kWh/year, with a minimal 1.78% of energy left unused. Solar contributes 61.4% of total output. Wind supplements during non-daylight hours. Grid provides backup only when required, making the system 64% renewable on average.</p>
-      <figure style="text-align: center;">
-        <img src="images/project7_energy_distribution.png" alt="Energy Distribution" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 3:</em> Renewable and grid energy contributions over time.</figcaption>
-      </figure>
+      <p>Several hybrid energy models were analyzed:</p>
+      <ul>
+        <li><strong>All-PV Off-Grid:</strong> High energy surplus (73%) but expensive and inefficient.</li>
+        <li><strong>PV + Wind (Off-Grid):</strong> Improved balance but still excessive excess energy (~71%).</li>
+        <li><strong>PV + Wind + Generator:</strong> Lower capital cost but high O&M and fuel dependency.</li>
+        <li><strong>Wind + Generator Only:</strong> Insufficient generation and excessive number of wind turbines.</li>
+        <li><strong>PV + Grid:</strong> Highly efficient with minimal excess but requires vast space.</li>
+        <li><strong>PV + Wind + Grid:</strong> Most balanced approach in terms of cost, efficiency, and space.</li>
+      </ul>
 
-      <!-- Economic Analysis -->
-      <h2>5. Economic Analysis</h2>
-      <p>The total system cost is ~$341,000. Major costs include PV panels ($70,579), wind turbines ($33,175), converters ($74,817), and grid O&M ($162,496). Payback period is ~4.4 years with an IRR of 22%. Carbon savings exceed 13,000 kg CO₂ annually.</p>
-      <figure style="text-align: center;">
-        <img src="images/project7_cost_breakdown.png" alt="Cost Breakdown" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 4:</em> Total cost distribution across components.</figcaption>
-      </figure>
+      <h2>5. Best Efficient Hybrid Energy Model for the Cold Storage</h2>
+      <p>The most practical and efficient system is a grid-connected hybrid consisting of 250 kW solar PV, 12 units of 1.5 kW wind turbines, and a 185 kW converter. It achieves:</p>
+      <ul>
+        <li><strong>Total Energy Generation:</strong> 768,877 kWh/year</li>
+        <li><strong>Grid Supply Contribution:</strong> ~34.3%</li>
+        <li><strong>Excess Energy:</strong> Just 1.4%</li>
+        <li><strong>ROI:</strong> ~5 years</li>
+        <li><strong>CO₂ Emission:</strong> 13,489 kg/year (much lower than fossil-fuel alternatives)</li>
+      </ul>
+      <p>Economically, this system has a total cost of approximately $341,069, balancing capital investment, replacement, and O&M costs effectively.</p>
 
       <!-- Optimization Features -->
       <h2>6. System Optimization and Automation</h2>
+      <p>To enhance performance, further improvements are recommended:</p>
       <ul>
-        <li>Arduino-based smart switching</li>
-        <li>Real-time monitoring to optimize compressor use</li>
-        <li>Thin-film coating reduces cooling demand by 120 kWh/day</li>
-        <li>Smart scheduling minimizes peak hour operation</li>
+        <li>Use of <strong>IoT-based energy monitoring</strong> for predictive maintenance and real-time load control.</li>
+        <li>Incorporating <strong>smart metering</strong> and load forecasting to dynamically balance generation and demand.</li>
+        <li>Optimization of <strong>component sizing</strong> to reduce excess energy generation.</li>
+        <li>Advanced <strong>thin-film coatings</strong> can reduce internal heat gain, cutting compressor run-time.</li>
+        <li><strong>Remote access control</strong> allows adjustments during environmental and demand fluctuations.</li>
       </ul>
-      <figure style="text-align: center;">
-        <img src="images/project7_thinfilm_spectrum.png" alt="Thin Film Spectral Performance" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 5:</em> Spectral filtering by thin-film Low-E coatings.</figcaption>
-      </figure>
+      <p>These recommendations aim to reduce operational costs, extend system life, and increase energy efficiency—turning the design into a benchmark for future rural energy infrastructure.</p>
 
       <!-- Conclusion -->
       <h2>7. Conclusion</h2>
