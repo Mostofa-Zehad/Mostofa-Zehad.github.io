@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Project 7 - Sustainable Cold Storage Facility for Fisheries</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<header id="header">
+  <a href="index.html" class="title">Project 7</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="generic.html">Education</a></li>
+      <li><a href="work.html">Work Experience</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <h1 class="major">Design and Implementation of a Cost-effective Cold Storage Unit Powered by Hybrid Energy Sources</h1>
+
+      <!-- Introduction -->
+      <h2>1. Introduction</h2>
+      <p>In Bangladesh, the lack of cold storage facilities in remote agricultural areas contributes heavily to food spoilage and economic loss. This project aims to address this issue by designing a hybrid energy-powered cold storage unit that combines solar, wind, battery, and grid resources to deliver uninterrupted refrigeration with minimized environmental impact and maximum cost-efficiency.</p>
+
+      <!-- System Overview and Energy Strategy -->
+      <h2>2. Methodology and Load Profile</h2>
+      <p>We analyzed an 800-tonne fish storage (temperature: -18&deg;C to -24&deg;C) and a 40-tonne crop storage (0&deg;C to 4&deg;C), consuming around 459,637 kWh/year. Load profiles were mapped and multiple hybrid configurations simulated using HOMER Pro. The best model minimizes excess energy while achieving ROI within 5 years.</p>
+      <ul>
+        <li><strong>Solar PV:</strong> 500 kW array</li>
+        <li><strong>Wind Turbine:</strong> 1 unit (1.5 kW)</li>
+        <li><strong>Grid Connection:</strong> Buy/sell rate set to $0.10/$0.05 per kWh</li>
+        <li><strong>Converter:</strong> 372 kW</li>
+        <li><strong>Battery:</strong> Optional for smoothing peaks</li>
+      </ul>
+      <figure style="text-align: center;">
+        <img src="images/project7_hybrid_schematic.png" alt="Hybrid System Schematic" style="max-width: 70%; height: auto;" />
+        <figcaption><em>Figure 1:</em> Proposed hybrid system combining PV, wind, and grid components.</figcaption>
+      </figure>
+
+      <!-- Power Output -->
+      <h2>3. Power Output & Performance</h2>
+      <p>The system produces 1,180,219 kWh/year, with a minimal 1.78% of energy left unused. Solar contributes 61.4% of total output. Wind supplements during non-daylight hours. Grid provides backup only when required, making the system 64% renewable on average.</p>
+      <figure style="text-align: center;">
+        <img src="images/project7_energy_distribution.png" alt="Energy Distribution" style="max-width: 70%; height: auto;" />
+        <figcaption><em>Figure 2:</em> Renewable and grid energy contributions over time.</figcaption>
+      </figure>
+
+      <!-- Economic Analysis -->
+      <h2>4. Economic Analysis</h2>
+      <p>The total system cost is ~$341,000. Major costs include PV panels ($70,579), wind turbines ($33,175), converters ($74,817), and grid O&M ($162,496). Payback period is ~4.4 years with an IRR of 22%. Carbon savings exceed 13,000 kg CO₂ annually.</p>
+      <figure style="text-align: center;">
+        <img src="images/project7_cost_breakdown.png" alt="Cost Breakdown" style="max-width: 70%; height: auto;" />
+        <figcaption><em>Figure 3:</em> Total cost distribution across components.</figcaption>
+      </figure>
+
+      <!-- Optimization Features -->
+      <h2>5. System Optimization and Automation</h2>
+      <ul>
+        <li>Arduino-based smart switching</li>
+        <li>Real-time monitoring to optimize compressor use</li>
+        <li>Thin-film coating reduces cooling demand by 120 kWh/day</li>
+        <li>Smart scheduling minimizes peak hour operation</li>
+      </ul>
+      <figure style="text-align: center;">
+        <img src="images/project7_thinfilm_spectrum.png" alt="Thin Film Spectral Performance" style="max-width: 70%; height: auto;" />
+        <figcaption><em>Figure 4:</em> Spectral filtering by thin-film Low-E coatings.</figcaption>
+      </figure>
+
+      <!-- Conclusion -->
+      <h2>6. Conclusion</h2>
+      <p>This hybrid system achieves grid independence up to 75%, rapid ROI, and a scalable model for rural cold chains. By integrating automation and material science, it bridges energy access and food security in developing regions. Further optimization can be achieved through smart metering and IoT-enhanced control systems.</p>
+
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper alt">
+  <div class="inner">
+    <ul class="menu">
+      <li>&copy; 2025 Kazi Zehad Mostofa. All rights reserved.</li>
+      <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
