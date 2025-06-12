@@ -5,7 +5,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .text-center {
+      text-align: center;
+    }
+    h2 i {
+      color: #4a90e2;
+      margin-right: 0.5rem;
+    }
+    .highlight-box {
+      background-color: #f0f8ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: #f8f8f8;
+      padding: 1rem;
+      border-left: 4px solid #4a90e2;
+      border-radius: 8px;
+    }
+    .stat-green { border-color: #28a745; }
+    .stat-yellow { border-color: #ffc107; }
+    .stat-red { border-color: #dc3545; }
+    .environment-box {
+      background: #e6ffed;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .img-responsive {
+      display: block;
+      margin: 2rem auto;
+      max-width: 75%;
+    }
+  </style>
 </head>
 <body class="is-preload">
 
@@ -27,57 +69,77 @@
     <!-- Main -->
     <section id="main" class="wrapper">
       <div class="inner">
-        <h1 class="major">EV Charging Infrastructure Performance Evaluation</h1>
+        <h1 class="major text-center"><i class="fas fa-charging-station"></i> EV Charging Infrastructure Performance Evaluation</h1>
 
-        <h2>📘 Project Overview</h2>
-        <p>
-          This project evaluates the performance and reliability of EV charging infrastructure across 305 stations using over 41 months of operational data. It identifies bottlenecks, highlights inefficiencies, and offers actionable recommendations for infrastructure improvement and energy optimization.
-        </p>
+        <!-- Project Summary -->
+        <div class="highlight-box">
+          <p><strong>Overview:</strong> This project evaluates the operational performance of 305 EV stations across 41 months. Key outcomes include bottleneck identification, power efficiency analysis, and resilience modeling.</p>
+        </div>
 
-        <h2>🔍 Scope and Methodology</h2>
+        <!-- Scope -->
+        <h2><i class="fas fa-search"></i> Scope and Methodology</h2>
         <ul>
-          <li>Data Collected: 305 stations | 17,500+ sessions | 41 months</li>
-          <li>Key Metrics: energy throughput, session utilization, no-power frequency, CO₂ savings</li>
-          <li>Techniques Used: Pearson correlation, regression analysis, Monte Carlo simulation</li>
+          <li><strong>Stations:</strong> 305 monitored</li>
+          <li><strong>Sessions:</strong> 17,500+</li>
+          <li><strong>Time Period:</strong> 41 months</li>
+          <li><strong>Key Metrics:</strong> Utilization, power loss, CO₂ savings</li>
+          <li><strong>Techniques:</strong> Correlation analysis, regression, Monte Carlo simulation</li>
         </ul>
-        <img src="images/ev_preprocessing.png" alt="Data Preprocessing" style="max-width: 75%; margin: 2rem auto; display: block;" />
+        <img src="images/ev_preprocessing.png" alt="Data Preprocessing" class="img-responsive" />
 
-        <h2>📊 Performance Analysis</h2>
+        <!-- Performance -->
+        <h2><i class="fas fa-bolt"></i> Performance Highlights</h2>
+        <div class="stats-grid">
+          <div class="stat-card stat-green">
+            <h3>Power Loss</h3>
+            <p><strong>27%</strong> of stations experienced active session failure</p>
+          </div>
+          <div class="stat-card stat-yellow">
+            <h3>Idle Time</h3>
+            <p><strong>38%+</strong> average idle time in urban zones</p>
+          </div>
+          <div class="stat-card stat-red">
+            <h3>Provider Risk</h3>
+            <p>ChargePoint handled <strong>80%</strong> of energy, posing a <strong>19%</strong> risk if it fails</p>
+          </div>
+        </div>
+        <img src="images/ev_charging_time.png" alt="Charging Time Analysis" class="img-responsive" />
+        <img src="images/ev_avg_power.png" alt="Average Power Data" class="img-responsive" />
+
+        <!-- Environmental Impact -->
+        <h2><i class="fas fa-leaf"></i> Environmental Impact</h2>
+        <div class="environment-box">
+          <p><strong>CO₂ Saved:</strong> Up to <span style="color: green;"><strong>120 tons/month</strong></span> using renewable-powered EV stations.</p>
+          <p><small>Based on U.S. EPA’s 0.43 kg CO₂/kWh factor</small></p>
+        </div>
+        <img src="images/ev_co2_reduction.png" alt="CO2 Reduction" class="img-responsive" />
+
+        <!-- Station Rankings -->
+        <h2><i class="fas fa-trophy"></i> Station Rankings</h2>
+        <p>We identified the top and bottom performers in terms of energy efficiency and utilization:</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+          <img src="images/ev_top_stations.png" alt="Top Performing Stations" style="max-width: 45%; margin: 1rem;" />
+          <img src="images/ev_bottom_stations.png" alt="Bottom Performing Stations" style="max-width: 45%; margin: 1rem;" />
+        </div>
+
+        <!-- Recommendations -->
+        <h2><i class="fas fa-lightbulb"></i> Key Recommendations</h2>
         <ul>
-          <li>~27% of stations had power loss during active sessions</li>
-          <li>Idle time accounted for 38%+ of total time in urban zones</li>
-          <li>ChargePoint contributed ~80% of the energy supplied, raising resilience concerns</li>
-          <li>Monte Carlo risk model showed 19% availability risk if single provider failed</li>
-        </ul>
-        <img src="images/ev_charging_time.png" alt="Charging Time Analysis" style="max-width: 75%; margin: 2rem auto; display: block;" />
-        <img src="images/ev_avg_power.png" alt="Average Power Data" style="max-width: 75%; margin: 2rem auto; display: block;" />
-
-        <h2>🌿 Environmental Impact</h2>
-        <p>
-          By using EV chargers powered by renewable grids, the system prevented up to <strong>120 tons of CO₂ emissions per month</strong>. CO₂ savings were calculated using the U.S. EPA’s factor of 0.43 kg CO₂/kWh.
-        </p>
-        <img src="images/ev_co2_reduction.png" alt="CO2 Reduction" style="max-width: 75%; margin: 2rem auto; display: block;" />
-
-        <h2>🏆 Station Rankings</h2>
-        <p>We ranked the top and bottom 10 stations by energy efficiency and utilization performance:</p>
-        <img src="images/ev_top_stations.png" alt="Top Performing Stations" style="max-width: 75%; margin: 2rem auto; display: block;" />
-        <img src="images/ev_bottom_stations.png" alt="Bottom Performing Stations" style="max-width: 75%; margin: 2rem auto; display: block;" />
-
-        <h2>📌 Recommendations</h2>
-        <ul>
-          <li>Enable predictive maintenance alerts using machine learning</li>
-          <li>Diversify charging network operators to reduce failure risk</li>
-          <li>Incentivize solar-PV integration with fast-charging setups</li>
-          <li>Adopt dynamic charging scheduling based on real-time demand</li>
+          <li>Enable predictive maintenance alerts using ML</li>
+          <li>Diversify charging network operators</li>
+          <li>Incentivize solar-PV integration with fast-charging</li>
+          <li>Adopt dynamic scheduling based on real-time demand</li>
         </ul>
 
-        <h2>📄 Publication</h2>
+        <!-- Publication -->
+        <h2><i class="fas fa-book-open"></i> Publication</h2>
         <p>
           <strong>Title:</strong> Data-Driven Insights for Optimizing EV Charging Infrastructure<br />
-          <strong>Status:</strong> Under review at <i>Global Energy Interconnection</i><br />
+          <strong>Status:</strong> Under Review @ <i>Global Energy Interconnection</i><br />
           <strong>Manuscript ID:</strong> GLOEI-D-24-00369R1
         </p>
 
+        <!-- Back Button -->
         <ul class="actions">
           <li><a href="index.html" class="button">← Back to Home</a></li>
         </ul>
