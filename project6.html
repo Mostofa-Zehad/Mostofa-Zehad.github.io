@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    body, p, li, figcaption, h2, ul {
+      color: black;
+    }
     .card-3d {
       background: #fff;
       border-radius: 12px;
@@ -23,14 +26,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #2e2e2e;
     }
     h2 i {
-      color: #1abc9c;
+      color: black !important;
     }
     figcaption {
       font-size: 0.9em;
-      color: #666;
     }
     ul li {
       margin-bottom: 8px;
@@ -56,20 +57,16 @@
 <div id="wrapper">
   <section id="main" class="wrapper">
     <div class="inner">
-      <h1 class="major">🔋 On-Grid PV Microgrid Design with Battery Storage Backup</h1>
+      <h1 class="major" style="color: #1abc9c;">🔋 On-Grid PV Microgrid Design with Battery Storage Backup</h1>
 
       <div class="card-3d">
-        <h2><i class="fas fa-solar-panel style="color: black;"></i> Introduction</h2>
-            <p style="color: black;">
-        This project develops a grid-connected photovoltaic (PV) microgrid with battery storage to address clean energy needs and grid resilience. The system design ensures 24-hour operation through intelligent control, solar generation, and energy storage coordination.
-            </p>
+        <h2><i class="fas fa-solar-panel"></i> Introduction</h2>
+        <p>This project develops a grid-connected photovoltaic (PV) microgrid with battery storage to address clean energy needs and grid resilience. The system design ensures 24-hour operation through intelligent control, solar generation, and energy storage coordination.</p>
       </div>
 
       <div class="card-3d">
-        <h2><i class="fas fa-network-wired style="color: black;"></i> System Design and Architecture</h2>
-        <p style="color: black;">
-          Designed with 132 SPR-X-21-345 PV modules (45 kW) and 390 batteries (48V, 10Ah), the microgrid operates in solar and battery modes depending on irradiance. PSCAD modeling helped fine-tune integration of converters and battery banks.
-        </p>
+        <h2><i class="fas fa-network-wired"></i> System Design and Architecture</h2>
+        <p>Designed with 132 SPR-X-21-345 PV modules (45 kW) and 390 batteries (48V, 10Ah), the microgrid operates in solar and battery modes depending on irradiance. PSCAD modeling helped fine-tune integration of converters and battery banks.</p>
         <figure style="text-align: center;">
           <img src="images/p6_microgrid_diagram.png" class="img-3d" alt="Microgrid System Design" style="max-width: 70%; height: auto;" />
           <figcaption><em>Figure 1:</em> Architecture with PV, battery, converters, and load.</figcaption>
@@ -77,8 +74,7 @@
       </div>
 
       <div class="card-3d">
-        <h2><i class="fas fa-bolt style="color: black;"></i> Converter Design and Control</h2>
-        <p style="color: black;">
+        <h2><i class="fas fa-bolt"></i> Converter Design and Control</h2>
         <p>The control system uses three converters for efficient power flow:</p>
         <ul>
           <li><strong>Boost Converter:</strong> Matches PV voltage with DC bus.</li>
@@ -86,7 +82,6 @@
           <li><strong>Active Rectifier:</strong> Delivers three-phase AC output.</li>
         </ul>
         <p>Bode plots verified stable operation for all converter feedback loops.</p>
-        </p>
         <figure style="text-align: center;">
           <img src="images/p6_bode_boost.png" class="img-3d" alt="Boost Converter Bode Plot" style="max-width: 70%; height: auto;" />
           <figcaption><em>Figure 2:</em> Stable frequency response for boost converter.</figcaption>
@@ -94,10 +89,8 @@
       </div>
 
       <div class="card-3d">
-        <h2><i class="fas fa-battery-full style="color: black;"></i> Battery Storage Strategy</h2>
-         <p style="color: black;">
-        The 140 kWh battery supports night-time loads with smart charging during the day. PSCAD analysis showed reliable SOC performance.
-         </p>
+        <h2><i class="fas fa-battery-full"></i> Battery Storage Strategy</h2>
+        <p>The 140 kWh battery supports night-time loads with smart charging during the day. PSCAD analysis showed reliable SOC performance.</p>
         <figure style="text-align: center;">
           <img src="images/p6_battery_soc.png" class="img-3d" alt="Battery State of Charge" style="max-width: 70%; height: auto;" />
           <figcaption><em>Figure 3:</em> SOC profile for a 24-hour cycle.</figcaption>
@@ -105,14 +98,12 @@
       </div>
 
       <div class="card-3d">
-        <h2><i class="fas fa-chart-line style="color: black;"></i> Simulation Results and Analysis</h2>
-        <p style="color: black;">
+        <h2><i class="fas fa-chart-line"></i> Simulation Results and Analysis</h2>
         <p>Power flow analysis under varied scenarios showed effective energy balancing:</p>
         <ul>
           <li><strong>Day:</strong> PV supplies load + charges battery</li>
           <li><strong>Night:</strong> Battery powers the load</li>
           <li><strong>Peaks:</strong> Combined supply from PV and battery</li>
-          </p>
         </ul>
         <figure style="text-align: center;">
           <img src="images/p6_power_flow_plot.png" class="img-3d" alt="Power Flow Plot" style="max-width: 70%; height: auto;" />
@@ -125,14 +116,12 @@
       </div>
 
       <div class="card-3d">
-        <h2><i class="fas fa-dollar-sign style="color: black;"></i> Economic Assessment</h2>
+        <h2><i class="fas fa-dollar-sign"></i> Economic Assessment</h2>
         <ul>
-          <p style="color: black;">
           <li><strong>System Cost:</strong> $118,000</li>
           <li><strong>Annual Savings:</strong> $26,981.32</li>
           <li><strong>Payback:</strong> 4.37 years</li>
           <li><strong>ROI:</strong> 22.88%</li>
-            </p>
         </ul>
       </div>
 
