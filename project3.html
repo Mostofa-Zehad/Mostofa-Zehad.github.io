@@ -50,56 +50,48 @@
   <div id="wrapper">
     <section id="main" class="wrapper">
       <div class="inner">
-        <h1 class="major text-center"><i class="fas fa-solar-panel"></i> ML-Enhanced All-PV Blended Energy System</h1>
+        <h1 class="major text-center"><i class="fas fa-solar-panel"></i> Machine Learning-Enhanced All-PV Blended Energy Systems</h1>
 
         <div class="highlight-section">
-          <p><strong>Overview:</strong> A complete renewable energy system model for buildings using diverse photovoltaic technologies, machine learning prediction models, and real-time cloud monitoring. This project aims for energy self-sufficiency, carbon emission reduction, and intelligent control via IoT and simulation platforms.</p>
+          <p><strong>Overview:</strong> This project investigates a full-surface photovoltaic building design that incorporates rooftop, vertical façade, and semitransparent BIPV modules, enhanced with machine learning for optimal energy yield prediction, intelligent sizing, and real-time monitoring. The system is tailored for energy-positive and low-carbon buildings in urban contexts.</p>
         </div>
 
-        <!-- Problem Statement -->
-        <h2><i class="fas fa-bolt"></i> 1. Problem Statement & Motivation</h2>
-        <p>Modern architecture demands seamless renewable integration. We address limitations in traditional PV setups by creating a flexible, multi-surface PV framework combined with machine learning for smarter energy forecasting.</p>
+        <h2><i class="fas fa-bolt"></i> 1. Problem Statement</h2>
+        <p>Building-integrated photovoltaics (BIPV) have immense potential but are underutilized due to complexity in modeling and integration. Existing PV systems often ignore vertical or transparent surfaces, limiting total solar capture. Our research proposes a blended PV model with intelligent control to utilize the full envelope of the building.</p>
         <img src="images/project3-benefits.png" alt="Project Benefits Overview" class="center-img" />
 
-        <!-- Architecture -->
-        <h2><i class="fas fa-network-wired"></i> 2. System Architecture</h2>
-        <p>Includes rooftop PV, BIPV windows, and transparent glass-integrated PV. It ensures full surface solar harvesting suitable for both urban and institutional buildings.</p>
+        <h2><i class="fas fa-layer-group"></i> 2. Proposed System Architecture</h2>
+        <p>The architecture includes three types of PV integration: conventional rooftop panels, vertical wall-mounted PV, and semitransparent window-integrated PV. The energy generation is managed through a hybrid DC/AC inverter setup supporting bi-directional metering.</p>
         <img src="images/pv_schematic.png" alt="PV System Schematic" class="center-img" />
 
-        <!-- ML & Simulation -->
-        <h2><i class="fas fa-robot"></i> 3. Machine Learning & Simulation Framework</h2>
-        <p>Python ML models and HOMER Pro simulations were used for optimal sizing and forecasting. Inputs include irradiance, angles, orientation, and hourly usage patterns.</p>
+        <h2><i class="fas fa-brain"></i> 3. Machine Learning Framework</h2>
+        <p>The prediction model uses supervised regression (SVR, RF) trained on irradiance, orientation, and time-of-day data to forecast hourly generation. HOMER Pro simulations complement the ML models for optimal component sizing and layout planning.</p>
         <img src="images/ml_architecture.jpg" alt="Machine Learning Architecture" class="center-img" />
 
-        <!-- IoT Monitoring -->
-        <h3><i class="fas fa-wifi"></i> ThingSpeak IoT Dashboard</h3>
-        <p>Real-time parameters like voltage, current, temperature, and power are monitored on a cloud dashboard for proactive insights.</p>
+        <h3><i class="fas fa-wifi"></i> 4. IoT-Based Real-Time Monitoring</h3>
+        <p>The PV system is integrated with an IoT framework using ThingSpeak for data visualization. Voltage, current, temperature, and irradiance are recorded in real-time to aid predictive maintenance and performance validation.</p>
         <img src="images/thingspeak_dashboard.png" alt="ThingSpeak Dashboard" class="center-img" />
 
-        <!-- Performance -->
-        <h2><i class="fas fa-chart-bar"></i> 5. Performance Simulation & City Comparison</h2>
-        <p>Simulated across 7 cities, the blended PV setup showed high yield and better ROI compared to single-surface systems.</p>
+        <h2><i class="fas fa-city"></i> 5. Performance Comparison Across Cities</h2>
+        <p>The simulation was performed for multiple cities across varied climate zones. Results indicate that the blended PV model outperforms single-surface PV systems by up to 28% in annual yield while enhancing daylight penetration indoors via semitransparent layers.</p>
         <img src="images/city_comparison.png" alt="City Comparison" class="center-img" />
+        <p><strong>Analysis:</strong> The energy yield advantage of blended PV was most significant in cities with high vertical irradiance such as Los Angeles and Kuala Lumpur. Locations with less horizontal roof area benefited more from vertical PV integration. Seasonal performance showed stability even during winter, confirming system adaptability. ML-based predictions aligned closely with simulation outputs, yielding a mean absolute error below 7% across the dataset.</p>
 
-        <!-- Layout -->
-        <h2><i class="fas fa-sitemap"></i> 6. Layout and Grid Integration</h2>
-        <p>Illustrates hybrid AC/DC layout with bi-directional metering and net metering advantages.</p>
+        <h2><i class="fas fa-project-diagram"></i> 6. Electrical Layout & Grid Connection</h2>
+        <p>The proposed electrical layout uses smart inverters, load balancers, and hybrid grid-interactive design. Both DC and AC buses are managed through energy management controllers.</p>
         <img src="images/simulation_layout.png" alt="Hybrid PV Layout" class="center-img" />
 
-        <!-- Achievements -->
-        <h2><i class="fas fa-star"></i> 7. Key Highlights</h2>
+        <h2><i class="fas fa-trophy"></i> 7. Key Highlights</h2>
         <ul>
-          <li>Up to 78% self-sufficiency achieved</li>
-          <li>ML-based predictive load and generation modeling</li>
-          <li>Live dashboard via ThingSpeak integration</li>
-          <li>Reduced CO₂ emissions in all modeled cities</li>
+          <li>Achieved 78% energy self-sufficiency in optimized deployments</li>
+          <li>30% reduced carbon footprint across modeled regions</li>
+          <li>Enhanced facade usability with transparent PV glass</li>
+          <li>Live predictive analytics through cloud-connected dashboard</li>
         </ul>
 
-        <!-- Conclusion -->
-        <h2><i class="fas fa-check-circle"></i> 8. Conclusion</h2>
-        <p>The project presents a scalable smart building energy model combining machine learning, cloud analytics, and full-surface solar PVs—aligning energy performance with sustainability targets.</p>
+        <h2><i class="fas fa-lightbulb"></i> 8. Conclusion</h2>
+        <p>This research introduces a scalable all-PV envelope for buildings that leverages AI, simulation, and IoT technologies. The proposed system is adaptable to various urban contexts and supports zero-energy building targets.</p>
 
-        <!-- Publication -->
         <h2><i class="fas fa-book"></i> 9. Publication</h2>
         <p><strong>Title:</strong> Machine learning-enhanced all-photovoltaic blended systems for energy-efficient sustainable buildings<br />
         <strong>Journal:</strong> Cleaner Energy Systems, Elsevier<br />
