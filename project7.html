@@ -5,11 +5,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body, p, li, figcaption, h2, ul {
+      color: black;
+    }
+    .card-3d {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+    }
+    .card-3d:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 i {
+      color: black !important;
+    }
+    figcaption {
+      font-size: 0.9em;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+  </style>
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 
-<!-- Header -->
 <header id="header">
   <a href="index.html" class="title">Project 7</a>
   <nav>
@@ -21,92 +52,91 @@
   </nav>
 </header>
 
-<!-- Wrapper -->
 <div id="wrapper">
   <section id="main" class="wrapper">
     <div class="inner">
-      <h1 class="major">Design and Implementation of a Cost-effective Cold Storage Unit Powered by Hybrid Energy Sources</h1>
+      <h1 class="major" style="color: #1abc9c;">❄️ Sustainable Cold Storage Facility Powered by Hybrid Energy Sources</h1>
 
-      <!-- Introduction -->
-      <h2>1. Introduction</h2>
-      <p>In Bangladesh, the lack of cold storage facilities in remote agricultural areas contributes heavily to food spoilage and economic loss. This project aims to address this issue by designing a hybrid energy-powered cold storage unit that combines solar, wind, battery, and grid resources to deliver uninterrupted refrigeration with minimized environmental impact and maximum cost-efficiency.</p>
+      <div class="card-3d">
+        <h2><i class="fas fa-seedling"></i> Introduction</h2>
+        <p>In Bangladesh, rural post-harvest losses are rampant due to the absence of cold storage. This project presents a hybrid-powered cold storage design that tackles this issue by combining solar, wind, and grid electricity to reduce operational cost and environmental impact.</p>
+      </div>
 
-      <!-- System Overview and Energy Strategy -->
-      <h2>2. Methodology and Load Profile</h2>
-      <p>We analyzed an 800-tonne fish storage (temperature: -18&deg;C to -24&deg;C) and a 40-tonne crop storage (0&deg;C to 4&deg;C), consuming around 459,637 kWh/year. Load profiles were mapped and multiple hybrid configurations simulated using HOMER Pro. The best model minimizes excess energy while achieving ROI within 5 years.</p>
-      <ul>
-        <li><strong>Solar PV:</strong> 500 kW array</li>
-        <li><strong>Wind Turbine:</strong> 1 unit (1.5 kW)</li>
-        <li><strong>Grid Connection:</strong> Buy/sell rate set to $0.10/$0.05 per kWh</li>
-        <li><strong>Converter:</strong> 372 kW</li>
-        <li><strong>Battery:</strong> Optional for smoothing peaks</li>
-      </ul>
-      <figure style="text-align: center;">
-        <img src="images/project7_hybrid_schematic.png" alt="Hybrid System Schematic" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 1:</em> Proposed hybrid system combining PV, wind, and grid components.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-chart-area"></i> Methodology & Load Profile</h2>
+        <p>Based on 800-tonne fish and 40-tonne crop requirements, the total load demand was ~459,637 kWh/year. The solution was optimized using HOMER Pro.</p>
+        <ul>
+          <li>500 kW Solar PV</li>
+          <li>1.5 kW Wind Turbine</li>
+          <li>Grid Sell/Buy: $0.05/$0.10</li>
+          <li>372 kW Converter</li>
+        </ul>
+        <figure style="text-align: center;">
+          <img src="images/project7_hybrid_schematic.png" alt="Hybrid System Schematic" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 1:</em> Hybrid layout integrating renewable and grid sources.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Homer Pro Model -->
-      <h2>3. HOMER Pro Optimized Hybrid Model</h2>
-      <p>Using HOMER Pro, the most optimal configuration was identified as a grid-connected system with 500 kW PV, one wind turbine, and a 372 kW converter. This combination results in the highest cost-effectiveness and the lowest excess electricity output (~1.78%).</p>
-      <figure style="text-align: center;">
-        <img src="images/project7_homer_model.png" alt="HOMER Pro Hybrid Configuration" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 2:</em> HOMER Pro schematic of the best-performing hybrid model.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-cogs"></i> HOMER Pro Optimal Configuration</h2>
+        <p>After simulating 20+ scenarios, HOMER identified a PV + wind + grid model as the most cost-effective, with only 1.78% excess electricity.</p>
+        <figure style="text-align: center;">
+          <img src="images/project7_homer_model.png" alt="HOMER Pro Hybrid Configuration" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 2:</em> HOMER schematic for optimal layout.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Power Output -->
-      <h2>4. Power Output & Performance</h2>
-      <p>Several hybrid energy models were analyzed:</p>
-      <ul>
-        <li><strong>All-PV Off-Grid:</strong> High energy surplus (73%) but expensive and inefficient.</li>
-        <li><strong>PV + Wind (Off-Grid):</strong> Improved balance but still excessive excess energy (~71%).</li>
-        <li><strong>PV + Wind + Generator:</strong> Lower capital cost but high O&M and fuel dependency.</li>
-        <li><strong>Wind + Generator Only:</strong> Insufficient generation and excessive number of wind turbines.</li>
-        <li><strong>PV + Grid:</strong> Highly efficient with minimal excess but requires vast space.</li>
-        <li><strong>PV + Wind + Grid:</strong> Most balanced approach in terms of cost, efficiency, and space.</li>
-      </ul>
-      <figure style="text-align: center;">
-        <img src="images/project7_energy_distribution.png" alt="project7_energy_distribution" style="max-width: 90%; height: auto;" />
-        <figcaption><em>Figure 3:</em> Power production, demand, and grid interaction across multiple hybrid configurations.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-bolt"></i> Power Output & Comparative Performance</h2>
+        <ul>
+          <li>All-PV: High surplus, poor ROI</li>
+          <li>PV+Wind (Off-Grid): Better, still wasteful</li>
+          <li>PV+Wind+Gen: Expensive O&M</li>
+          <li>Wind+Gen: Inefficient, spatially demanding</li>
+          <li>PV+Grid: Efficient, space-heavy</li>
+          <li>PV+Wind+Grid: Best compromise</li>
+        </ul>
+        <figure style="text-align: center;">
+          <img src="images/project7_energy_distribution.png" alt="Energy Distribution" style="max-width: 90%; height: auto;" />
+          <figcaption><em>Figure 3:</em> Energy supply and demand balance comparison.</figcaption>
+        </figure>
+      </div>
 
-      <h2>5. Best Efficient Hybrid Energy Model for the Cold Storage</h2>
-      <p>The most practical and efficient system is a grid-connected hybrid consisting of 250 kW solar PV, 12 units of 1.5 kW wind turbines, and a 185 kW converter. It achieves:</p>
-      <ul>
-        <li><strong>Total Energy Generation:</strong> 768,877 kWh/year</li>
-        <li><strong>Grid Supply Contribution:</strong> ~34.3%</li>
-        <li><strong>Excess Energy:</strong> Just 1.4%</li>
-        <li><strong>ROI:</strong> ~5 years</li>
-        <li><strong>CO₂ Emission:</strong> 13,489 kg/year (much lower than fossil-fuel alternatives)</li>
-      </ul>
-      <p><figure style="text-align: center;">
-        <img src="images/project7_cost_breakdown.png" alt="project7_cost_breakdown" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 4:</em> Capital, replacement, and O&M cost distribution for the selected hybrid system.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-chart-pie"></i> Best Hybrid Model: Output & Economics</h2>
+        <ul>
+          <li>250 kW PV, 12 wind turbines, 185 kW converter</li>
+          <li>768,877 kWh/year generated</li>
+          <li>Grid covers 34.3%</li>
+          <li>1.4% excess electricity</li>
+          <li>CO₂ reduced to 13,489 kg/year</li>
+          <li>ROI in 5 years | Cost: ~$341,069</li>
+        </ul>
+        <figure style="text-align: center;">
+          <img src="images/project7_cost_breakdown.png" alt="Cost Breakdown" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 4:</em> Distribution of capital, replacement, and O&M costs.</figcaption>
+        </figure>
+      </div>
 
-      Economically, this system has a total cost of approximately $341,069, balancing capital investment, replacement, and O&M costs effectively.</p>
+      <div class="card-3d">
+        <h2><i class="fas fa-microchip"></i> Optimization & Smart Features</h2>
+        <ul>
+          <li>IoT for real-time control and predictive maintenance</li>
+          <li>Load forecasting via smart meters</li>
+          <li>Thin-film insulation to reduce compressor runtime</li>
+          <li>Remote adjustment for demand variation</li>
+        </ul>
+      </div>
 
-      <!-- Optimization Features -->
-      <h2>6. System Optimization and Automation</h2>
-      <p>To enhance performance, further improvements are recommended:</p>
-      <ul>
-        <li>Use of <strong>IoT-based energy monitoring</strong> for predictive maintenance and real-time load control.</li>
-        <li>Incorporating <strong>smart metering</strong> and load forecasting to dynamically balance generation and demand.</li>
-        <li>Optimization of <strong>component sizing</strong> to reduce excess energy generation.</li>
-        <li>Advanced <strong>thin-film coatings</strong> can reduce internal heat gain, cutting compressor run-time.</li>
-        <li><strong>Remote access control</strong> allows adjustments during environmental and demand fluctuations.</li>
-      </ul>
-      <p>These recommendations aim to reduce operational costs, extend system life, and increase energy efficiency—turning the design into a benchmark for future rural energy infrastructure.</p>
-
-      <!-- Conclusion -->
-      <h2>7. Conclusion</h2>
-      <p>This hybrid system achieves grid independence up to 75%, rapid ROI, and a scalable model for rural cold chains. By integrating automation and material science, it bridges energy access and food security in developing regions. Further optimization can be achieved through smart metering and IoT-enhanced control systems.</p>
+      <div class="card-3d">
+        <h2><i class="fas fa-flag-checkered"></i> Conclusion</h2>
+        <p>This model provides a scalable solution to rural food storage challenges with clean energy, ROI within 5 years, and up to 75% energy independence.</p>
+      </div>
 
     </div>
   </section>
 </div>
 
-<!-- Footer -->
 <footer id="footer" class="wrapper alt">
   <div class="inner">
     <ul class="menu">
@@ -116,7 +146,6 @@
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
