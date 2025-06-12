@@ -26,8 +26,8 @@
   <!-- Wrapper -->
   <div id="wrapper">
 
-    <section id="intro" class="wrapper style1 fullscreen fade-up bg-gradient-to-br from-purple-800 to-indigo-900 text-white">
-  <div class="inner grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-8 py-12">
+    <section id="intro" class="relative wrapper style1 fullscreen fade-up text-white" style="background: url('images/renewable_bg.jpg') no-repeat center center / cover;">
+  <div class="inner grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-8 py-12 relative z-10">
     
     <!-- Left Column: Text -->
     <div>
@@ -63,12 +63,14 @@
       </div>
     </div>
 
-    <!-- Right Column: Profile Image -->
-    <div class="hidden md:block text-center">
-      <img src="images/your_profile_picture.jpg" alt="Profile Image" class="w-64 h-64 object-cover rounded-full shadow-xl mx-auto border-4 border-white" />
-    </div>
+    <!-- Right Column: Empty or optional content -->
+    <div></div>
 
   </div>
+
+  <!-- Floating Cutout Image at Bottom Right -->
+  <img src="images/kazi_cutout.png" alt="Kazi Zehad Mostofa" class="absolute bottom-0 right-0 w-48 md:w-64 lg:w-72 xl:w-80 object-contain z-20" />
+
 </section>
 
 
