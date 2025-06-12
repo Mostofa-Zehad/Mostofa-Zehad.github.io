@@ -5,7 +5,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .highlight-box {
+      background: #eef7ff;
+      border-left: 6px solid #007acc;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+    .center-img {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 75%;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    h2 i {
+      color: #007acc;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
 <body class="is-preload">
 
@@ -25,61 +47,62 @@
   <div id="wrapper">
     <section id="main" class="wrapper">
       <div class="inner">
-        <h1 class="major">Hybrid PV and Low-E Glass Retrofit for Sustainable School Buildings in Bangladesh</h1>
+        <h1 class="major text-center"><i class="fas fa-school"></i> Hybrid PV and Low-E Glass Retrofit for Sustainable Schools in Bangladesh</h1>
 
-        <p>This project demonstrates a combined approach of rooftop PV systems and Low-E coated windows for improving the energy efficiency, thermal comfort, and sustainability of school buildings across Bangladesh. It applies a hybrid design methodology validated through simulation tools such as HOMER Pro and HelioScope.</p>
+        <div class="highlight-box">
+          <p><strong>Overview:</strong> This project evaluates the techno-economic and environmental impact of deploying rooftop photovoltaic (PV) systems and Low-E coated window retrofitting across schools in Bangladesh. Simulations were conducted using HOMER Pro and HelioScope on representative schools to assess performance, payback, and carbon reductions.</p>
+        </div>
 
         <!-- 1. Problem Statement -->
-        <h2>1. Problem Statement & Objectives</h2>
-        <p>Most schools in Bangladesh suffer from poor thermal insulation and high daytime energy demand, leading to dependency on inefficient grid systems or diesel generators. This project proposes a retrofitting solution using PV and Low-E technologies to reduce load and emissions.</p>
-        <p style="text-align: center;"><img src="images/p4_pv_system_schematic.png" alt="PV Hybrid Schematic" style="max-width: 75%;" /></p>
+        <h2><i class="fas fa-exclamation-circle"></i> 1. Problem Statement & Objectives</h2>
+        <p>Public schools in Bangladesh face challenges due to inefficient energy use, high cooling loads, and unreliable grid access. Diesel backup is costly and polluting. This study proposes a hybrid system combining PV electricity generation with thermal comfort improvements from Low-E glass retrofitting.</p>
+        <img src="images/p4_pv_system_schematic.png" alt="PV Hybrid Schematic" class="center-img" />
 
         <!-- 2. Solar Resource & Energy Demand -->
-        <h2>2. Solar Potential & Energy Profiles</h2>
-        <p>The monthly solar irradiance and clearness index are shown below, providing insights into solar availability for rooftop PV deployment.</p>
-        <p style="text-align: center;"><img src="images/p4_solar_radiation_clearness.png" alt="Solar Irradiance and Clearness Index" style="max-width: 70%;" /></p>
+        <h2><i class="fas fa-sun"></i> 2. Solar Potential & Energy Profiles</h2>
+        <p>Bangladesh receives ample solar radiation (avg. 4.5–5.5 kWh/m²/day). Monthly clearness index and irradiance patterns suggest high feasibility for rooftop installations across school infrastructures.</p>
+        <img src="images/p4_solar_radiation_clearness.png" alt="Solar Irradiance and Clearness Index" class="center-img" />
 
-        <p>Power consumption analysis of high and primary schools reveals strong seasonal variations in monthly demand.</p>
-        <p style="text-align: center;"><img src="images/p4_high_school_load_chart.png" alt="High School Load Chart" style="max-width: 60%;" /></p>
-        <p style="text-align: center;"><img src="images/p4_primary_school_consumption.png" alt="Primary School Comparison" style="max-width: 60%;" /></p>
+        <p>Energy profiles show high variance in seasonal demand between secondary and primary schools. Load data was collected from Dhaka schools to define sizing strategies.</p>
+        <img src="images/p4_high_school_load_chart.png" alt="High School Load Chart" class="center-img" />
+        <img src="images/p4_primary_school_consumption.png" alt="Primary School Comparison" class="center-img" />
 
         <!-- 3. Emission Analysis -->
-        <h2>3. Environmental Impact</h2>
-        <p>Annual gas emissions for different power configurations (PV, diesel, hybrid) are illustrated below:</p>
-        <p style="text-align: center;"><img src="images/p4_gas_emissions_comparison.png" alt="Emission Comparison" style="max-width: 65%;" /></p>
+        <h2><i class="fas fa-leaf"></i> 3. Environmental Impact</h2>
+        <p>Annual greenhouse gas emissions were modeled for PV-only, diesel-only, and hybrid configurations. Results show up to 75% reduction in emissions for the hybrid system.</p>
+        <img src="images/p4_gas_emissions_comparison.png" alt="Emission Comparison" class="center-img" />
 
         <!-- 4. Low-E Window Benefits -->
-        <h2>4. Low-E Glass Performance</h2>
-        <p>The transmission comparison between regular and Low-E coated windows is shown below, emphasizing reduced heat gain and better indoor thermal comfort.</p>
-        <p style="text-align: center;"><img src="images/p4_glass_transmission_spectra.png" alt="Glass Transmission Spectra" style="max-width: 75%;" /></p>
+        <h2><i class="fas fa-window-restore"></i> 4. Low-E Glass Performance</h2>
+        <p>Spectral transmission analysis shows Low-E windows block high infrared heat while allowing visible light. This reduces indoor temperature by 2–3°C without affecting natural daylight.</p>
+        <img src="images/p4_glass_transmission_spectra.png" alt="Glass Transmission Spectra" class="center-img" />
 
         <!-- 5. Rooftop Design & Layout -->
-        <h2>5. Rooftop PV Layout</h2>
-        <p>The HelioScope simulation layout of a real school (Udayan) rooftop is shown, demonstrating panel orientation, inverter placement, and usable area.</p>
-        <p style="text-align: center;"><img src="images/p4_udayan_rooftop_layout.png" alt="Udayan Rooftop Layout" style="max-width: 80%;" /></p>
+        <h2><i class="fas fa-drafting-compass"></i> 5. Rooftop PV Layout</h2>
+        <p>HelioScope layout for Udayan School optimizes panel spacing and inverter placement. The simulated array meets up to 50% of daily electricity needs under standard test conditions.</p>
+        <img src="images/p4_udayan_rooftop_layout.png" alt="Udayan Rooftop Layout" class="center-img" />
 
         <!-- 6. Economic Analysis -->
-        <h2>6. Financial Summary</h2>
-        <p>Financial feasibility is illustrated through payback period curves. The hybrid PV + Low-E model provides a return on investment within 6.4 years for high schools.</p>
-        <p style="text-align: center;"><img src="images/p4_payback_analysis_curve.png" alt="Payback Period Curve" style="max-width: 60%;" /></p>
+        <h2><i class="fas fa-chart-line"></i> 6. Financial Summary</h2>
+        <p>Simulation results indicate a hybrid system ROI of 6.4 years for secondary schools and 7.8 years for primary schools. Low-E retrofits contribute up to 14% cooling cost savings annually.</p>
+        <img src="images/p4_payback_analysis_curve.png" alt="Payback Period Curve" class="center-img" />
 
         <!-- 7. Conclusion -->
-        <h2>7. Conclusion & Impact</h2>
+        <h2><i class="fas fa-check-circle"></i> 7. Conclusion & Impact</h2>
         <ul>
-          <li>Up to 28% energy savings from PV</li>
-          <li>Up to 14% cooling savings from Low-E glass</li>
-          <li>~18 tons CO₂ reduction per building per year</li>
-          <li>Payback period under 6.5 years (for high schools)</li>
-          <li>Thermal comfort improved by 2–3°C indoors</li>
+          <li>28% electricity savings from rooftop PV systems</li>
+          <li>Up to 14% cooling energy savings via Low-E glass</li>
+          <li>Up to 18 tons CO₂ saved annually per school</li>
+          <li>ROI within 6.5 years for most secondary institutions</li>
+          <li>Indoor temperatures reduced by 2–3°C in test rooms</li>
         </ul>
 
         <!-- 8. Related Publication -->
-        <h2>📚 Related Publication</h2>
+        <h2><i class="fas fa-book"></i> 8. Related Publication</h2>
         <p><strong>Title:</strong> Rooftop PV or Hybrid Systems and Retrofitted Low-E Coated Windows for Energywise and Self-Sustainable School Buildings in Bangladesh<br/>
         <strong>Journal:</strong> MDPI Solar (2024)<br/>
         <strong>DOI:</strong> <a href="https://doi.org/10.3390/solar2040032" target="_blank">10.3390/solar2040032</a><br/>
         <strong>Authors:</strong> Kazi Zehad Mostofa, Mohammad Aminul Islam, et al.</p>
-
       </div>
     </section>
   </div>
