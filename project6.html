@@ -5,6 +5,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .card-3d {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+    }
+    .card-3d:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #2e2e2e;
+    }
+    h2 i {
+      color: #1abc9c;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+  </style>
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
@@ -25,72 +56,78 @@
 <div id="wrapper">
   <section id="main" class="wrapper">
     <div class="inner">
-      <h1 class="major">On-Grid PV Microgrid Design with Battery Storage Backup</h1>
+      <h1 class="major">🔋 On-Grid PV Microgrid Design with Battery Storage Backup</h1>
 
-      <!-- Introduction -->
-      <h2>1. Introduction</h2>
-      <p>Amid rising energy demands and increasing pressure to decarbonize power systems, grid-connected photovoltaic (PV) microgrids offer an ideal blend of sustainability, resilience, and economic feasibility. This project focuses on developing and analyzing a PV-based microgrid integrated with battery storage using PSCAD simulation tools. The objective is to supply 24-hour energy by efficiently coordinating solar generation during the day and battery discharge at night.</p>
+      <div class="card-3d">
+        <h2><i class="fas fa-solar-panel"></i> 1. Introduction</h2>
+        <p>This project develops a grid-connected photovoltaic (PV) microgrid with battery storage to address clean energy needs and grid resilience. The system design ensures 24-hour operation through intelligent control, solar generation, and energy storage coordination.</p>
+      </div>
 
-      <!-- System Architecture -->
-      <h2>2. System Design and Architecture</h2>
-      <p>The microgrid consists of a 45 kW solar inverter, 132 SPR-X-21-345 PV modules, and 390 batteries rated at 48V and 10Ah. The system is designed to operate in dual-mode: solar-driven operation during the day and battery-driven supply during nighttime or low irradiation periods.</p>
-      <figure style="text-align: center;">
-        <img src="images/p6_microgrid_diagram.png" alt="Microgrid System Design" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 1:</em> System architecture showing PV panels, battery bank, converters, and loads.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-network-wired"></i> 2. System Design and Architecture</h2>
+        <p>Designed with 132 SPR-X-21-345 PV modules (45 kW) and 390 batteries (48V, 10Ah), the microgrid operates in solar and battery modes depending on irradiance. PSCAD modeling helped fine-tune integration of converters and battery banks.</p>
+        <figure style="text-align: center;">
+          <img src="images/p6_microgrid_diagram.png" class="img-3d" alt="Microgrid System Design" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 1:</em> Architecture with PV, battery, converters, and load.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Converter Topology -->
-      <h2>3. Converter Design and Control</h2>
-      <p>Power electronics are critical for voltage regulation and load matching. The system employs three key converters:</p>
-      <ul>
-        <li><strong>Boost Converter:</strong> Increases PV voltage for stable DC bus interfacing.</li>
-        <li><strong>Buck-Boost Converter:</strong> Charges and discharges the battery as needed.</li>
-        <li><strong>Active Rectifier:</strong> Converts DC to high-quality three-phase AC output.</li>
-      </ul>
-      <p>Bode plots confirm system stability by showing positive phase and gain margins across converter loops.</p>
-      <figure style="text-align: center;">
-        <img src="images/p6_bode_boost.png" alt="Boost Converter Bode Plot" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 2:</em> Bode plot of the boost converter showing phase and gain margin for stable performance.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-bolt"></i> 3. Converter Design and Control</h2>
+        <p>The control system uses three converters for efficient power flow:</p>
+        <ul>
+          <li><strong>Boost Converter:</strong> Matches PV voltage with DC bus.</li>
+          <li><strong>Buck-Boost Converter:</strong> Manages battery charge/discharge.</li>
+          <li><strong>Active Rectifier:</strong> Delivers three-phase AC output.</li>
+        </ul>
+        <p>Bode plots verified stable operation for all converter feedback loops.</p>
+        <figure style="text-align: center;">
+          <img src="images/p6_bode_boost.png" class="img-3d" alt="Boost Converter Bode Plot" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 2:</em> Stable frequency response for boost converter.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Battery Design -->
-      <h2>4. Battery Storage Strategy</h2>
-      <p>The battery bank supports 140 kWh of energy delivery over 12 hours during non-solar periods. Charging occurs during solar surplus, and discharging covers evening and early morning demand.</p>
-      <figure style="text-align: center;">
-        <img src="images/p6_battery_soc.png" alt="Battery State of Charge" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 3:</em> Battery state of charge (SOC) trend during daily charging and discharging cycles.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-battery-full"></i> 4. Battery Storage Strategy</h2>
+        <p>The 140 kWh battery supports night-time loads with smart charging during the day. PSCAD analysis showed reliable SOC performance.</p>
+        <figure style="text-align: center;">
+          <img src="images/p6_battery_soc.png" class="img-3d" alt="Battery State of Charge" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 3:</em> SOC profile for a 24-hour cycle.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Simulation Results -->
-      <h2>5. Simulation Results and Analysis</h2>
-      <p>PSCAD simulations validate system performance under dynamic loading and irradiance scenarios. The microgrid efficiently balances power among PV, battery, and load through active control.</p>
-      <ul>
-        <li><strong>Daytime:</strong> PV power meets demand while charging the battery.</li>
-        <li><strong>Nighttime:</strong> Battery power discharges to meet the load.</li>
-        <li><strong>Peak Loads:</strong> Both PV and battery participate to support higher consumption periods.</li>
-      </ul>
-      <figure style="text-align: center;">
-        <img src="images/p6_power_flow_plot.png" alt="PV, Battery, and Load Power Plot" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 4:</em> Power flow showing PV production (Ppv), battery charge/discharge (Pbat), and load demand (Pload) over time.</figcaption>
-      </figure>
-      <figure style="text-align: center;">
-        <img src="images/p6_inverter_output.png" alt="Inverter Output" style="max-width: 70%; height: auto;" />
-        <figcaption><em>Figure 5:</em> Inverter voltage output confirming regulated three-phase AC delivery.</figcaption>
-      </figure>
+      <div class="card-3d">
+        <h2><i class="fas fa-chart-line"></i> 5. Simulation Results and Analysis</h2>
+        <p>Power flow analysis under varied scenarios showed effective energy balancing:</p>
+        <ul>
+          <li><strong>Day:</strong> PV supplies load + charges battery</li>
+          <li><strong>Night:</strong> Battery powers the load</li>
+          <li><strong>Peaks:</strong> Combined supply from PV and battery</li>
+        </ul>
+        <figure style="text-align: center;">
+          <img src="images/p6_power_flow_plot.png" class="img-3d" alt="Power Flow Plot" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 4:</em> Real-time power dynamics.</figcaption>
+        </figure>
+        <figure style="text-align: center;">
+          <img src="images/p6_inverter_output.png" class="img-3d" alt="Inverter Output" style="max-width: 70%; height: auto;" />
+          <figcaption><em>Figure 5:</em> Stable 3-phase AC voltage waveform.</figcaption>
+        </figure>
+      </div>
 
-      <!-- Economic Feasibility -->
-      <h2>6. Economic Assessment</h2>
-      <p>Cost estimation and return on investment analysis confirm that the system is economically practical. The investment is well-justified through substantial annual savings and a short payback horizon:</p>
-      <ul>
-        <li><strong>Total System Cost:</strong> $118,000</li>
-        <li><strong>Annual Savings:</strong> $26,981.32</li>
-        <li><strong>Payback Period:</strong> 4.37 years</li>
-        <li><strong>ROI:</strong> 22.88%</li>
-      </ul>
+      <div class="card-3d">
+        <h2><i class="fas fa-dollar-sign"></i> 6. Economic Assessment</h2>
+        <ul>
+          <li><strong>System Cost:</strong> $118,000</li>
+          <li><strong>Annual Savings:</strong> $26,981.32</li>
+          <li><strong>Payback:</strong> 4.37 years</li>
+          <li><strong>ROI:</strong> 22.88%</li>
+        </ul>
+      </div>
 
-      <!-- Conclusion -->
-      <h2>7. Conclusion</h2>
-      <p>This project demonstrates the technical reliability and economic feasibility of a grid-connected PV microgrid with battery storage. The design ensures continuous energy supply, clean power quality, and cost savings. It is a scalable model ideal for remote areas, campuses, and smart grid pilot zones seeking renewable integration with high reliability.</p>
+      <div class="card-3d">
+        <h2><i class="fas fa-flag-checkered"></i> 7. Conclusion</h2>
+        <p>This PSCAD-modeled PV-battery microgrid proves efficient, stable, and financially viable for real-world deployment in schools, rural sites, and smart city nodes.</p>
+      </div>
 
     </div>
   </section>
