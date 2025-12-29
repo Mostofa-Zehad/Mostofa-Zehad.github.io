@@ -9,24 +9,128 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    /* Small helper styles to match your current layout */
-    .text-center { text-align: center; }
-    .img-center { display:block; margin: 0 auto; max-width: 75%; }
-    .tagline { opacity: 0.9; margin-top: -0.5rem; }
+    /* --- Portfolio polish (works well with HTML5UP) --- */
+    .text-center { text-align:center; }
+    .muted { opacity: 0.9; }
+    .hero {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem;
+      margin: 0.8rem 0 1.4rem 0;
+    }
+    .hero h1 { margin-bottom: 0.2rem; }
+    .tagline { margin-top: 0.2rem; opacity: 0.9; }
     .pill {
-      display: inline-block; padding: 0.25rem 0.6rem; margin: 0.15rem 0.2rem;
-      border-radius: 999px; border: 1px solid rgba(255,255,255,0.25);
-      font-size: 0.85rem;
+      display:inline-block;
+      padding: 0.28rem 0.70rem;
+      margin: 0.20rem 0.20rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.03);
+      font-size: 0.88rem;
+      white-space: nowrap;
     }
-    .table-wrap { overflow-x: auto; }
-    table.params {
-      width: 100%; border-collapse: collapse; margin: 0.8rem 0 1.2rem 0;
+    .toc {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      border-radius: 16px;
+      padding: 1rem 1rem;
+      margin: 0.8rem 0 1.4rem 0;
     }
-    table.params th, table.params td {
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 0.7rem; vertical-align: top;
+    .toc a { text-decoration: none; }
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 0.75rem 0 1.25rem 0;
     }
-    table.params th { text-align: left; }
+    .grid3 {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin: 0.6rem 0 1.2rem 0;
+    }
+    @media (max-width: 980px) { .grid2 { grid-template-columns: 1fr; } .grid3 { grid-template-columns: 1fr; } }
+
+    .card {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 1rem 1rem;
+    }
+    .card h3 { margin-top: 0; }
+    .kpi {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.9rem;
+      margin: 0.9rem 0 1.25rem 0;
+    }
+    @media (max-width: 980px) { .kpi { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .kpi { grid-template-columns: 1fr; } }
+    .kpi-card {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 0.95rem 0.95rem;
+    }
+    .kpi-card .label { font-size: 0.9rem; opacity: 0.85; }
+    .kpi-card .value { font-size: 1.35rem; font-weight: 800; margin-top: 0.2rem; }
+    .kpi-card .sub { font-size: 0.9rem; opacity: 0.85; margin-top: 0.2rem; }
+
+    .figure {
+      margin: 0.9rem 0 1.25rem 0;
+    }
+    .figure img {
+      display:block;
+      margin: 0.4rem auto 0.6rem auto;
+      max-width: 92%;
+      height:auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.02);
+    }
+    .caption {
+      text-align:center;
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-top: -0.2rem;
+    }
+
+    .table-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem 0; }
+    table.pretty {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.05);
+    }
+    table.pretty th, table.pretty td {
+      padding: 0.72rem 0.75rem;
+      border: 1px solid rgba(255,255,255,0.14);
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+    table.pretty th { text-align: left; }
+
+    details summary {
+      cursor: pointer;
+      margin: 0.5rem 0;
+      font-weight: 700;
+    }
+    .note {
+      border-left: 4px solid rgba(255,255,255,0.25);
+      padding-left: 0.9rem;
+      opacity: 0.95;
+      margin: 0.6rem 0 1.2rem 0;
+    }
+    .btnrow {
+      display:flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.8rem;
+    }
+    .btnrow a.button { margin: 0; }
   </style>
 </head>
 
@@ -34,7 +138,7 @@
 
   <!-- Header -->
   <header id="header">
-    <a href="index.html" class="title">Project</a>
+    <a href="index.html" class="title">Project 0</a>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -51,111 +155,108 @@
     <section id="main" class="wrapper">
       <div class="inner">
 
-        <h1 class="major text-center">
-          <i class="fas fa-fire-flame-curved"></i>
-          Resilient Economic Dispatch for Thermal-Led Microgrids
-        </h1>
+        <!-- HERO -->
+        <div class="hero text-center">
+          <h1 class="major">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            Resilient Economic Dispatch for Thermal-Led Microgrids
+          </h1>
+          <p class="tagline">
+            Gaussian Copula Scenarios • Symmetric Heat Penalties • Robust (Minimax) Day-Ahead MILP
+          </p>
 
-        <p class="text-center tagline">
-          Copula-Based Scenarios • Symmetric Heat Penalties • Robust (Minimax) Day-Ahead MILP
-        </p>
+          <div style="margin-top: 0.5rem;">
+            <span class="pill"><i class="fa-solid fa-diagram-project"></i> Dependence-aware uncertainty</span>
+            <span class="pill"><i class="fa-solid fa-scale-balanced"></i> Two-sided thermal slack pricing</span>
+            <span class="pill"><i class="fa-solid fa-battery-three-quarters"></i> BESS degradation-aware</span>
+            <span class="pill"><i class="fa-solid fa-shield-halved"></i> Worst-case robustness</span>
+          </div>
 
-        <div class="text-center" style="margin-bottom: 1rem;">
-          <span class="pill"><i class="fa-solid fa-diagram-project"></i> Gaussian Copula</span>
-          <span class="pill"><i class="fa-solid fa-scale-balanced"></i> Symmetric Thermal Penalty</span>
-          <span class="pill"><i class="fa-solid fa-battery-three-quarters"></i> BESS Degradation</span>
-          <span class="pill"><i class="fa-solid fa-calendar-day"></i> 24-hour Day-Ahead</span>
-          <span class="pill"><i class="fa-solid fa-shield-halved"></i> Robust / Worst-case</span>
+          <div class="btnrow">
+            <a href="#results" class="button primary"><i class="fa-solid fa-chart-line"></i> Results</a>
+            <a href="#tables" class="button"><i class="fa-solid fa-table"></i> Tables</a>
+            <a href="#figures" class="button"><i class="fa-solid fa-images"></i> Figures</a>
+          </div>
         </div>
 
-        <!-- Optional hero image -->
-        <img src="images/microgrid-hero.png" alt="Project Overview" class="img-center" />
+        <!-- Figure 1 -->
+        <div class="figure" id="overview">
+          <img src="images/project0-fig01-tok-microgrid-overview.png" alt="Tok School microgrid one-line diagram (CHP, PV, BESS, grid)" />
+          <div class="caption"><strong>Figure 1.</strong> Tok School microgrid one-line diagram (CHP, PV, BESS, and grid).</div>
+        </div>
 
-        <!-- Overview -->
-        <h2><i class="fas fa-globe"></i> Project Overview</h2>
-        <p>
-          This project develops a robust day-ahead scheduling framework for <strong>thermal-led CHP microgrids</strong>
-          in cold climates, where electric and thermal demands are tightly coupled and uncertain.
-          The method combines <strong>Gaussian-copula joint scenario generation</strong> with
-          <strong>symmetric thermal penalties</strong> to avoid unrealistic dispatch behavior and improve resilience.
-        </p>
+        <!-- TOC -->
+        <div class="toc">
+          <h2 style="margin-top:0;"><i class="fa-solid fa-compass"></i> Page Guide</h2>
+          <div class="grid3">
+            <div class="card">
+              <h3><i class="fa-solid fa-globe"></i> Overview</h3>
+              <ul style="margin-bottom:0;">
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#contrib">Contributions</a></li>
+                <li><a href="#case">Case Study</a></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-microchip"></i> Method</h3>
+              <ul style="margin-bottom:0;">
+                <li><a href="#copula">Copula Scenarios</a></li>
+                <li><a href="#penalty">Symmetric Thermal Penalties</a></li>
+                <li><a href="#milp">Thermal-led MILP</a></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-chart-line"></i> Evidence</h3>
+              <ul style="margin-bottom:0;">
+                <li><a href="#results">Key Results</a></li>
+                <li><a href="#tables">All Tables (1–4)</a></li>
+                <li><a href="#figures">All Figures (1–6)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        <!-- Abstract -->
-        <h2><i class="fas fa-file-alt"></i> Abstract (Paper Summary)</h2>
+        <!-- PROBLEM -->
+        <h2 id="problem"><i class="fa-solid fa-circle-question"></i> Problem</h2>
         <p>
-          CHP microgrids in cold regions must meet tightly coupled electric and thermal demands under uncertainty.
-          Many dispatch models ignore electric–thermal dependence or penalize only unmet heat (which can encourage
-          overproduction). This work introduces:
+          In cold-climate microgrids, heat is mission-critical. CHP units often run “thermal-first,” and electricity is a byproduct.
+          Two issues often break day-ahead schedules:
         </p>
         <ul>
-          <li><strong>Gaussian-copula scenario generation</strong> capturing same-hour E↔T correlation and AR(1) temporal persistence</li>
-          <li><strong>Symmetric heat penalties</strong> that cost both under- and over-production to eliminate “run-hot” bias</li>
-          <li>A thermal-led <strong>MILP</strong> with CHP coupling, BESS exclusivity, degradation costs, and charge-first surplus under zero export credit</li>
+          <li><strong>Electric–thermal dependence is ignored:</strong> winter electric and thermal peaks occur together, so independent sampling underestimates joint stress.</li>
+          <li><strong>Thermal slack is penalized asymmetrically:</strong> if only unmet heat is penalized, the optimizer can “run hot,” wasting fuel and increasing cycling.</li>
         </ul>
 
-        <!-- Key Contributions -->
-        <h2><i class="fas fa-bullseye"></i> Key Contributions</h2>
-        <ul>
-          <li>
-            <strong>Dependence-aware uncertainty modeling:</strong> Hourly electric–thermal dependence modeled using Kendall’s τ,
-            preserving same-hour correlation and temporal structure.
-          </li>
-          <li>
-            <strong>Thermal realism:</strong> Two-sided slack variables cost both <em>unmet</em> and <em>surplus</em> heat,
-            preventing intentional over-heating.
-          </li>
-          <li>
-            <strong>Operational constraints for daily use:</strong> CHP limits, BESS SOC + charge/discharge exclusivity,
-            grid import/export gating, and a robust (minimax) objective.
-          </li>
-        </ul>
+        <!-- CONTRIBUTIONS -->
+        <h2 id="contrib"><i class="fa-solid fa-bullseye"></i> What This Project Adds</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3 style="margin-top:0;"><i class="fa-solid fa-diagram-project"></i> Gaussian Copula Scenario Engine</h3>
+            <p class="muted" style="margin-bottom:0;">
+              Generates joint electric–thermal daily scenarios that preserve same-hour correlation and temporal persistence (AR(1)),
+              producing realistic winter co-movement.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0;"><i class="fa-solid fa-scale-balanced"></i> Symmetric Thermal Penalties</h3>
+            <p class="muted" style="margin-bottom:0;">
+              Uses two-sided slack variables to price both under-produced and over-produced heat, eliminating “run-hot” bias while keeping feasibility.
+            </p>
+          </div>
+        </div>
 
-        <!-- Methodology -->
-        <h2><i class="fas fa-microchip"></i> Methodology</h2>
-
-        <h3><i class="fa-solid fa-chart-area"></i> 1) Gaussian-Copula Joint Scenario Generation</h3>
+        <!-- CASE -->
+        <h2 id="case"><i class="fa-solid fa-location-dot"></i> Case Study</h2>
         <p>
-          Electric and thermal loads are transformed using probability integral transforms (PIT), mapped to latent Gaussian
-          variables, and sampled with a structured correlation matrix that preserves same-hour correlation and AR(1)
-          persistence. Scenarios are then mapped back to the original marginals to create realistic E–T trajectories.
+          Validation uses the Tok School microgrid (Alaska): biomass CHP (thermal-led), rooftop PV, lithium-ion BESS, and a grid interconnection
+          with import price and zero export credit.
         </p>
 
-        <!-- Optional methodology figure -->
-        <img src="images/copula-method.png" alt="Copula Scenario Generation Diagram" class="img-center" />
-
-        <h3><i class="fa-solid fa-scale-balanced"></i> 2) Symmetric Thermal Penalties</h3>
-        <p>
-          Thermal adequacy is maintained using <strong>bidirectional slack variables</strong> representing
-          <em>unmet heat</em> and <em>excess heat</em>. The objective assigns costs to both, preventing “run-hot”
-          behavior and keeping the schedule feasible under uncertainty.
-        </p>
-
-        <h3><i class="fa-solid fa-cubes"></i> 3) Thermal-Led MILP Dispatch</h3>
-        <ul>
-          <li><strong>CHP coupling:</strong> Electric and thermal outputs tied to fuel input through fixed efficiencies</li>
-          <li><strong>BESS constraints:</strong> SOC recursion, bounds, and charge/discharge exclusivity</li>
-          <li><strong>Battery degradation:</strong> Convex piecewise throughput proxy included in the cost</li>
-          <li><strong>Grid gating:</strong> Import/export mutually exclusive; export credit set to zero</li>
-          <li><strong>Robust objective:</strong> Minimize worst-case (minimax) cost across scenarios</li>
-        </ul>
-
-        <!-- Case Study -->
-        <h2><i class="fas fa-map-marker-alt"></i> Case Study: Tok School Microgrid (Alaska)</h2>
-        <p>
-          The validation platform is the Tok School microgrid in Alaska, including a biomass CHP (thermal-first),
-          rooftop PV, lithium-ion BESS, and a utility interconnection.
-        </p>
-
-        <img src="images/tok-oneline.png" alt="Tok School Microgrid One-Line Diagram" class="img-center" />
-
+        <!-- Table 1 -->
+        <h3 id="tables"><i class="fa-solid fa-table"></i> Table 1 — Device Ratings & Operational Parameters</h3>
         <div class="table-wrap">
-          <table class="params">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Value</th>
-              </tr>
-            </thead>
+          <table class="pretty">
+            <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
             <tbody>
               <tr><td>Rooftop PV</td><td>51 kWh</td></tr>
               <tr><td>CHP thermal efficiency</td><td>0.60</td></tr>
@@ -178,59 +279,222 @@
           </table>
         </div>
 
-        <!-- Data & Solver -->
-        <h2><i class="fas fa-database"></i> Data Processing & Optimization</h2>
-        <ul>
-          <li>NREL building load profiles for Tok, Alaska resampled to hourly resolution</li>
-          <li>Hourly marginal distributions calibrated (P10–P50–P90) for electric and thermal loads</li>
-          <li>Scenario engine sampled <strong>1,000</strong> electric–thermal trajectories</li>
-          <li>24-hour day-ahead MILP implemented in <strong>Pyomo</strong> and solved using <strong>CBC</strong></li>
-        </ul>
+        <!-- METHOD -->
+        <h2 id="copula"><i class="fa-solid fa-microchip"></i> Methodology</h2>
 
-        <!-- Results -->
-        <h2><i class="fas fa-chart-line"></i> Results & Key Findings</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3 style="margin-top:0;"><i class="fa-solid fa-chart-area"></i> 1) Copula-Based Joint Scenarios</h3>
+            <ul style="margin-bottom:0;">
+              <li>Use PIT to map electric/thermal loads to uniforms.</li>
+              <li>Map to latent Gaussian space; enforce same-hour E↔T correlation.</li>
+              <li>Apply AR(1) structure across hours to keep temporal realism.</li>
+              <li>Sample many daily trajectories and invert back to original marginals.</li>
+            </ul>
+          </div>
+
+          <div class="card" id="milp">
+            <h3 style="margin-top:0;"><i class="fa-solid fa-cubes"></i> 2) Thermal-Led MILP Dispatch</h3>
+            <ul style="margin-bottom:0;">
+              <li>Electric balance from CHP + PV + BESS + grid import.</li>
+              <li>BESS SOC recursion + bounds + charge/discharge exclusivity.</li>
+              <li>Battery degradation cost via convex throughput proxy.</li>
+              <li>Grid import/export gated; export credit set to zero.</li>
+              <li>Robust objective: minimize worst-case (minimax) cost across scenarios.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" id="penalty">
+          <h3 style="margin-top:0;"><i class="fa-solid fa-scale-balanced"></i> 3) Symmetric Thermal Penalties (No “Run-Hot” Bias)</h3>
+          <p class="muted" style="margin-bottom:0;">
+            Thermal adequacy uses two slacks: <strong>under-heat</strong> and <strong>over-heat</strong>.
+            Both are priced, so the optimizer has no incentive to waste heat to avoid shortage penalties.
+          </p>
+        </div>
+
+        <!-- FIGURES: Copula evidence -->
+        <h2 id="figures"><i class="fa-solid fa-images"></i> Figures (1–6)</h2>
+
+        <div class="figure">
+          <img src="images/project0-fig02-copula-workflow.png" alt="Empirical PIT correlation vs PSD copula correlation heatmaps" />
+          <div class="caption"><strong>Figure 2.</strong> Empirical PIT correlation vs PSD copula correlation (dependence validation).</div>
+        </div>
+
+        <div class="figure">
+          <img src="images/project0-fig03-et-correlation.png" alt="Same-hour electric-thermal scatter comparison at hour 10: measurement, copula, independent" />
+          <div class="caption"><strong>Figure 3.</strong> Same-hour electric ↔ thermal scatter at h=10 (measurement vs copula vs independent).</div>
+        </div>
+
+        <div class="figure">
+          <img src="images/project0-fig04-scenario-fanplot.png" alt="Same-hour electrical-thermal correlation across hours: measurement vs copula vs independent" />
+          <div class="caption"><strong>Figure 4.</strong> Same-hour electric ↔ thermal correlation across hours (measurement vs copula vs independent).</div>
+        </div>
+
+        <!-- Table 2 -->
+        <h3><i class="fa-solid fa-table"></i> Table 2 — Scenario Calibration & Dependence Diagnostics</h3>
+        <div class="table-wrap">
+          <table class="pretty">
+            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Winter days used (DJF, non-holidays)</td><td>87</td></tr>
+              <tr><td>P10–P90 coverage (E, T)</td><td>91.7%, 95.8%</td></tr>
+              <tr><td>Avg. band width (E, T) [kWh]</td><td>6.727, 6.403</td></tr>
+              <tr><td>Mean AR (1) (E, T)</td><td>0.862</td></tr>
+              <tr><td>Same-hour corr. (E↔T)</td><td>0.976, 0.976</td></tr>
+              <tr><td>Cross-lag corr. (E→T, T→E)</td><td>0.848, 0.835</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- RESULTS -->
+        <h2 id="results"><i class="fa-solid fa-chart-line"></i> Results (January 15 Worst-Case Day)</h2>
         <p>
-          Compared to an independence-based approach, copula-based scheduling improved robustness and reduced operational
-          stress. On the winter test day, the proposed method achieved:
+          Copula-based robust scheduling improves worst-case performance and eliminates thermal slack compared to an independence-based approach.
         </p>
-        <ul>
-          <li><strong>Worst-case cost:</strong> −8.1%</li>
-          <li><strong>Total grid import:</strong> −2.9%</li>
-          <li><strong>Battery wear (degradation cost):</strong> −29.1%</li>
-          <li><strong>Thermal slack:</strong> eliminated (0 under-heat and 0 over-heat)</li>
-        </ul>
 
-        <img src="images/results-summary.png" alt="Results Summary Plots" class="img-center" />
+        <!-- KPI cards from Table 3 -->
+        <div class="kpi">
+          <div class="kpi-card">
+            <div class="label"><i class="fa-solid fa-dollar-sign"></i> Worst-case daily cost</div>
+            <div class="value">−8.1%</div>
+            <div class="sub">2010 → 1847</div>
+          </div>
+          <div class="kpi-card">
+            <div class="label"><i class="fa-solid fa-plug-circle-bolt"></i> Total grid import</div>
+            <div class="value">−2.9%</div>
+            <div class="sub">3030 → 2942</div>
+          </div>
+          <div class="kpi-card">
+            <div class="label"><i class="fa-solid fa-battery-half"></i> BESS degradation cost</div>
+            <div class="value">−29.1%</div>
+            <div class="sub">9.6 → 6.81</div>
+          </div>
+          <div class="kpi-card">
+            <div class="label"><i class="fa-solid fa-temperature-high"></i> Thermal slack</div>
+            <div class="value">Eliminated</div>
+            <div class="sub">18.0/2.0 → 0/0</div>
+          </div>
+        </div>
 
-        <h3><i class="fa-solid fa-snowflake"></i> Interpretation (What this means)</h3>
-        <ul>
-          <li>
-            <strong>Copula scenarios:</strong> better capture real winter co-movement (E & T peaks together), so the schedule is
-            less surprised by tail events.
-          </li>
-          <li>
-            <strong>Symmetric penalties:</strong> stop the optimizer from “running hot” just to avoid under-heat penalties, which
-            reduces wasted fuel and unnecessary cycling.
-          </li>
-          <li>
-            <strong>Operational viability:</strong> The model remains MILP-compatible and practical for daily scheduling.
-          </li>
-        </ul>
+        <!-- Table 3 -->
+        <h3><i class="fa-solid fa-table"></i> Table 3 — Operational Impact of Scenario Type (January 15)</h3>
+        <div class="table-wrap">
+          <table class="pretty">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Indep</th>
+                <th>Copula</th>
+                <th>Δ vs Indep</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Worst-case daily cost</td><td>2,010</td><td>1,847</td><td>−8.1%</td></tr>
+              <tr><td>Total grid import</td><td>3,030</td><td>2,942</td><td>−2.9%</td></tr>
+              <tr><td>BESS degradation cost</td><td>9.6</td><td>6.81</td><td>−29.1%</td></tr>
+              <tr><td>Over-heat / Under-heat</td><td>18.0/2.0</td><td>0 / 0</td><td>eliminated</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        <!-- Conclusion -->
-        <h2><i class="fas fa-flag-checkered"></i> Conclusion</h2>
-        <p>
-          This work proposes a robust day-ahead scheduling method for thermal-led microgrids that combines
-          dependence-aware Gaussian copula scenarios with symmetric thermal penalties. The framework improves worst-case
-          economics and reduces battery wear while maintaining thermal adequacy in cold climates.
-        </p>
+        <!-- Figures 5 & 6 -->
+        <div class="figure">
+          <img src="images/project0-fig05-thermal-balance-jan15-s569.png" alt="Thermal balance on January 15 worst-case scenario S569" />
+          <div class="caption"><strong>Figure 5.</strong> Thermal balance on January 15 (worst-case scenario S569).</div>
+        </div>
+
+        <div class="figure">
+          <img src="images/project0-fig06-dispatch-stack.png" alt="Optimization dispatch of microgrid resource stack across 24 hours" />
+          <div class="caption"><strong>Figure 6.</strong> Optimization dispatch of the microgrid (resource stack across 24 hours).</div>
+        </div>
+
+        <div class="note">
+          <strong>Interpretation:</strong> The dispatch is heat-led: CHP tracks thermal demand; PV contributes a small midday slice;
+          BESS does shallow discharges to shave peaks; grid import covers remaining demand with no export credit.
+        </div>
+
+        <!-- Table 4 (full) -->
+        <h2 id="tables"><i class="fa-solid fa-table-list"></i> Table 4 — Full Hour-by-Hour Dispatch (Worst-Case Scenario)</h2>
+        <details>
+          <summary>Click to expand the full 24-hour dispatch table</summary>
+
+          <div class="table-wrap">
+            <table class="pretty">
+              <thead>
+                <tr>
+                  <th>Hour</th>
+                  <th>Elec Load</th>
+                  <th>CHP Elec</th>
+                  <th>PV</th>
+                  <th>BESS Dis</th>
+                  <th>BESS Ch</th>
+                  <th>Grid Imp</th>
+                  <th>SOC</th>
+                  <th>Price</th>
+                  <th>Fuel $</th>
+                  <th>Grid $</th>
+                  <th>Deg $</th>
+                  <th>Hourly $</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>163</td><td>53</td><td>0</td><td>15</td><td>0</td><td>95</td><td>284.2</td><td>0.6</td><td>10.6</td><td>52.2</td><td>0.5</td><td>63.4</td></tr>
+                <tr><td>1</td><td>101.6</td><td>29.5</td><td>0</td><td>15</td><td>0</td><td>57.1</td><td>268.4</td><td>0.6</td><td>5.9</td><td>31.4</td><td>0.5</td><td>37.8</td></tr>
+                <tr><td>2</td><td>87.2</td><td>25.7</td><td>0</td><td>7.5</td><td>0</td><td>54</td><td>260.5</td><td>0.6</td><td>5.1</td><td>29.7</td><td>0.1</td><td>35</td></tr>
+                <tr><td>3</td><td>95.6</td><td>27.9</td><td>0</td><td>15</td><td>0</td><td>52.7</td><td>244.7</td><td>0.6</td><td>5.6</td><td>29</td><td>0.5</td><td>35.1</td></tr>
+                <tr><td>4</td><td>97.6</td><td>28.9</td><td>0</td><td>15</td><td>0</td><td>53.6</td><td>228.9</td><td>0.6</td><td>5.8</td><td>29.5</td><td>0.5</td><td>35.8</td></tr>
+                <tr><td>5</td><td>101.3</td><td>32</td><td>0</td><td>15</td><td>0</td><td>54.3</td><td>213.2</td><td>0.6</td><td>6.4</td><td>29.9</td><td>0.5</td><td>36.8</td></tr>
+                <tr><td>6</td><td>108.7</td><td>31.9</td><td>0</td><td>7.5</td><td>0</td><td>69.3</td><td>205.3</td><td>0.6</td><td>6.4</td><td>38.1</td><td>0.1</td><td>44.6</td></tr>
+                <tr><td>7</td><td>102</td><td>30.6</td><td>0</td><td>15</td><td>0</td><td>56.5</td><td>189.5</td><td>0.6</td><td>6.1</td><td>31.1</td><td>0.5</td><td>37.7</td></tr>
+                <tr><td>8</td><td>103.4</td><td>30.3</td><td>0</td><td>15</td><td>0</td><td>58</td><td>173.7</td><td>0.6</td><td>6.1</td><td>31.9</td><td>0.5</td><td>38.5</td></tr>
+                <tr><td>9</td><td>106.7</td><td>29.7</td><td>0</td><td>9.4</td><td>0</td><td>67.6</td><td>163.8</td><td>0.6</td><td>5.9</td><td>37.2</td><td>0.2</td><td>43.3</td></tr>
+                <tr><td>10</td><td>214.5</td><td>66.9</td><td>0.1</td><td>7.5</td><td>0</td><td>140</td><td>155.9</td><td>0.6</td><td>13.4</td><td>77</td><td>0.1</td><td>90.5</td></tr>
+                <tr><td>11</td><td>263.3</td><td>72.4</td><td>0.8</td><td>7.5</td><td>0</td><td>182.6</td><td>148</td><td>0.6</td><td>14.5</td><td>100.4</td><td>0.1</td><td>115</td></tr>
+                <tr><td>12</td><td>273.9</td><td>70.5</td><td>1.8</td><td>7.5</td><td>0</td><td>194.1</td><td>140.1</td><td>0.6</td><td>14.1</td><td>106.8</td><td>0.1</td><td>121</td></tr>
+                <tr><td>13</td><td>251.6</td><td>62.1</td><td>1</td><td>7.5</td><td>0</td><td>181</td><td>132.2</td><td>0.6</td><td>12.4</td><td>99.5</td><td>0.1</td><td>112.1</td></tr>
+                <tr><td>14</td><td>242</td><td>59.7</td><td>0.2</td><td>7.5</td><td>0</td><td>174.6</td><td>124.3</td><td>0.6</td><td>11.9</td><td>96</td><td>0.1</td><td>108.1</td></tr>
+                <tr><td>15</td><td>231.2</td><td>54.1</td><td>0</td><td>7.5</td><td>0</td><td>169.6</td><td>116.4</td><td>0.6</td><td>10.8</td><td>93.3</td><td>0.1</td><td>104.2</td></tr>
+                <tr><td>16</td><td>224.3</td><td>50.9</td><td>0</td><td>7.5</td><td>0</td><td>166</td><td>108.6</td><td>0.6</td><td>10.2</td><td>91.3</td><td>0.1</td><td>101.6</td></tr>
+                <tr><td>17</td><td>218.1</td><td>47.7</td><td>0</td><td>7.5</td><td>0</td><td>162.8</td><td>100.7</td><td>0.6</td><td>9.5</td><td>89.6</td><td>0.1</td><td>99.2</td></tr>
+                <tr><td>18</td><td>207.2</td><td>43.2</td><td>0</td><td>7.5</td><td>0</td><td>156.5</td><td>92.8</td><td>0.6</td><td>8.6</td><td>86.1</td><td>0.1</td><td>94.9</td></tr>
+                <tr><td>19</td><td>202.4</td><td>43.3</td><td>0</td><td>15</td><td>0</td><td>144.1</td><td>77</td><td>0.6</td><td>8.7</td><td>79.2</td><td>0.5</td><td>88.4</td></tr>
+                <tr><td>20</td><td>205.5</td><td>49.6</td><td>0</td><td>15</td><td>0</td><td>140.8</td><td>61.2</td><td>0.6</td><td>9.9</td><td>77.5</td><td>0.5</td><td>87.9</td></tr>
+                <tr><td>21</td><td>242.9</td><td>57.1</td><td>0</td><td>7.5</td><td>0</td><td>178.3</td><td>53.3</td><td>0.6</td><td>11.4</td><td>98</td><td>0.1</td><td>109.6</td></tr>
+                <tr><td>22</td><td>234.2</td><td>59.4</td><td>0</td><td>7.5</td><td>0</td><td>167.3</td><td>45.4</td><td>0.6</td><td>11.9</td><td>92</td><td>0.1</td><td>104</td></tr>
+                <tr><td>23</td><td>229.1</td><td>55.1</td><td>0</td><td>7.5</td><td>0</td><td>166.5</td><td>37.5</td><td>0.6</td><td>11</td><td>91.6</td><td>0.1</td><td>102.7</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <!-- Tools -->
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Implementation</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3 style="margin-top:0;"><i class="fa-brands fa-python"></i> Modeling</h3>
+            <ul style="margin-bottom:0;">
+              <li>Pyomo (MILP formulation)</li>
+              <li>CBC solver</li>
+              <li>Scenario generation: Gaussian copula + AR(1)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0;"><i class="fa-solid fa-database"></i> Data</h3>
+            <ul style="margin-bottom:0;">
+              <li>NREL building load profiles (Tok, Alaska)</li>
+              <li>Hourly marginals calibrated (P10–P50–P90)</li>
+              <li>1,000 joint E–T scenarios for robust dispatch</li>
+            </ul>
+          </div>
+        </div>
 
         <!-- Publication -->
-        <h2><i class="fas fa-book-open"></i> Publication</h2>
-        <p>
-          <strong>Title:</strong> Resilient Economic Dispatch for Thermal-Led Microgrids Using Copula-Based Scenarios and Symmetric Heat Penalties<br/>
+        <h2><i class="fa-solid fa-book-open"></i> Publication</h2>
+        <p class="muted">
+          <strong>Resilient Economic Dispatch for Thermal-Led Microgrids Using Copula-Based Scenarios and Symmetric Heat Penalties</strong><br/>
           <strong>Authors:</strong> Kazi Z. Mostofa, Yazhou “Leo” Jiang<br/>
-          <em>(Add conference/journal + DOI/link here when finalized)</em>
+          <em>Add conference/journal + DOI/link here when finalized.</em>
         </p>
 
         <!-- Back -->
