@@ -79,23 +79,31 @@
     .kpi-card .sub { font-size: 0.9rem; opacity: 0.85; margin-top: 0.2rem; }
 
     .figure {
-      margin: 0.9rem 0 1.25rem 0;
-    }
-    .figure img {
-      display:block;
-      margin: 0.4rem auto 0.6rem auto;
-      max-width: 92%;
-      height:auto;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.02);
-    }
-    .caption {
-      text-align:center;
-      font-size: 0.95rem;
-      opacity: 0.85;
-      margin-top: -0.2rem;
-    }
+  margin: 0.9rem 0 1.25rem 0;
+}
+
+.figure img {
+  display: block;
+  margin: 0.4rem auto 0.6rem auto;
+  max-width: 92%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Make only Figure 1 bigger (the one with id="overview") */
+#overview img {
+  max-width: 100%;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: -0.2rem;
+}
+
 
     .table-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem 0; }
     table.pretty {
