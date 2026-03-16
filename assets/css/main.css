@@ -3907,3 +3907,410 @@ input, select, textarea {
 			}
 
 		}
+
+/* ============================================================
+   DESIGN SYSTEM — Dark Navy Professional Theme
+   Kazi Zehad Mostofa Portfolio
+   ============================================================ */
+
+:root {
+	--navy: #060e1c;
+	--navy-2: #0a1628;
+	--surface: rgba(255,255,255,0.035);
+	--surface-2: rgba(255,255,255,0.06);
+	--accent: #38bdf8;
+	--accent-soft: rgba(56,189,248,0.68);
+	--accent-glow: rgba(56,189,248,0.12);
+	--border: rgba(56,189,248,0.13);
+	--text: #f1f5f9;
+	--text-muted: rgba(241,245,249,0.68);
+	--text-dim: rgba(241,245,249,0.40);
+	--radius: 12px;
+	--shadow: 0 2px 20px rgba(0,0,0,0.45);
+	--shadow-a: 0 6px 32px rgba(56,189,248,0.1);
+}
+
+/* ---- Base ---- */
+body {
+	background-color: var(--navy) !important;
+	font-family: 'Inter', Arial, sans-serif !important;
+	color: var(--text-muted) !important;
+}
+
+body, input, select, textarea {
+	font-family: 'Inter', Arial, sans-serif !important;
+	color: var(--text-muted) !important;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Plus Jakarta Sans', Arial, sans-serif !important;
+	color: var(--text) !important;
+	letter-spacing: -0.015em;
+}
+
+h1.major {
+	font-size: 2.2em !important;
+	font-weight: 800 !important;
+	margin-bottom: 1.6em !important;
+	padding-bottom: 0.55em !important;
+}
+
+h1.major:after {
+	background-color: var(--accent) !important;
+	background-image: linear-gradient(90deg, var(--accent) 0%, #22d3ee 100%) !important;
+	height: 3px !important;
+	border-radius: 2px !important;
+}
+
+p { color: var(--text-muted) !important; }
+strong, b { color: var(--text) !important; }
+
+/* ---- Links ---- */
+a {
+	color: var(--accent) !important;
+	border-bottom-color: rgba(56,189,248,0.22) !important;
+	transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
+}
+
+a:hover {
+	color: #bae6fd !important;
+	border-bottom-color: rgba(186,230,253,0.4) !important;
+}
+
+/* ---- Header (sub-page top bar) ---- */
+#header {
+	background: rgba(6,14,28,0.97) !important;
+	border-bottom: 1px solid var(--border) !important;
+	-webkit-backdrop-filter: blur(20px) !important;
+	backdrop-filter: blur(20px) !important;
+}
+
+#header > a {
+	color: var(--text) !important;
+	font-family: 'Plus Jakarta Sans', sans-serif !important;
+	font-weight: 700 !important;
+	font-size: 0.9rem !important;
+	border-bottom: none !important;
+	letter-spacing: -0.01em !important;
+}
+
+#header > a:hover { color: var(--accent) !important; }
+
+#header nav ul li a {
+	color: var(--text-dim) !important;
+	font-family: 'Inter', sans-serif !important;
+	font-size: 0.72rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.08em !important;
+	text-transform: uppercase !important;
+	border-bottom: none !important;
+	transition: color 0.2s ease !important;
+}
+
+#header nav ul li a:hover,
+#header nav ul li a.active {
+	color: var(--accent) !important;
+}
+
+/* ---- Layout ---- */
+#wrapper { background: transparent !important; }
+
+.wrapper { background: var(--navy) !important; }
+.wrapper.style1 { background: var(--navy-2) !important; }
+.wrapper.style2 { background: var(--navy) !important; }
+.wrapper.style3 { background: var(--navy-2) !important; }
+.wrapper.alt, .wrapper.style1-alt { background: #03070f !important; }
+
+section#main.wrapper, div#main.wrapper {
+	background: var(--navy) !important;
+}
+
+/* ---- Feature Grid (Skills page) ---- */
+.features section {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: var(--radius) !important;
+	padding: 2rem 1.75rem !important;
+	box-shadow: var(--shadow) !important;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.features section:hover {
+	border-color: rgba(56,189,248,0.30) !important;
+	box-shadow: var(--shadow-a) !important;
+	transform: translateY(-3px) !important;
+}
+
+.features section h3 {
+	color: var(--text) !important;
+	font-weight: 700 !important;
+	font-size: 0.95rem !important;
+	margin-bottom: 0.75rem !important;
+}
+
+.features section p,
+.features section li {
+	color: var(--text-muted) !important;
+	font-size: 0.88rem !important;
+	line-height: 1.75 !important;
+}
+
+.features ul { list-style: none !important; }
+
+.features .icon.major:before,
+.features .icon.solid.major:before {
+	color: var(--accent) !important;
+}
+
+/* ---- Buttons ---- */
+.button, a.button {
+	display: inline-block !important;
+	background: transparent !important;
+	border: 1.5px solid rgba(56,189,248,0.38) !important;
+	border-radius: 8px !important;
+	color: var(--accent) !important;
+	font-family: 'Inter', sans-serif !important;
+	font-size: 0.75rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.08em !important;
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+	padding: 0.7em 1.8em !important;
+	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.18s ease, box-shadow 0.2s ease !important;
+	box-shadow: none !important;
+	cursor: pointer !important;
+}
+
+.button:hover, a.button:hover {
+	background: rgba(56,189,248,0.08) !important;
+	border-color: var(--accent) !important;
+	color: #bae6fd !important;
+	transform: translateY(-1px) !important;
+	box-shadow: 0 4px 20px var(--accent-glow) !important;
+}
+
+.button.primary, .button.special,
+a.button.primary, a.button.special {
+	background: var(--accent) !important;
+	border-color: var(--accent) !important;
+	color: #050b16 !important;
+	font-weight: 700 !important;
+}
+
+.button.primary:hover, .button.special:hover,
+a.button.primary:hover, a.button.special:hover {
+	background: #7dd3fc !important;
+	border-color: #7dd3fc !important;
+	color: #050b16 !important;
+	box-shadow: 0 6px 24px rgba(56,189,248,0.25) !important;
+	transform: translateY(-2px) !important;
+}
+
+/* ---- Forms ---- */
+input[type="text"], input[type="email"],
+input[type="password"], select, textarea {
+	background: rgba(255,255,255,0.04) !important;
+	border: 1px solid rgba(56,189,248,0.18) !important;
+	border-radius: 8px !important;
+	color: var(--text) !important;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+	border-color: var(--accent) !important;
+	box-shadow: 0 0 0 3px rgba(56,189,248,0.10) !important;
+	outline: none !important;
+}
+
+/* ---- Tables ---- */
+table.pretty {
+	border: 1px solid var(--border) !important;
+	background: rgba(0,0,0,0.18) !important;
+}
+
+table.pretty th, table.pretty td {
+	border-color: var(--border) !important;
+	color: var(--text-muted) !important;
+	padding: 0.75rem 1rem !important;
+}
+
+table.pretty th {
+	background: rgba(56,189,248,0.06) !important;
+	color: var(--text) !important;
+	font-family: 'Plus Jakarta Sans', sans-serif !important;
+	font-weight: 600 !important;
+}
+
+table.pretty tbody tr:hover td {
+	background: rgba(56,189,248,0.04) !important;
+}
+
+/* ---- Project 0: components ---- */
+.hero, .toc {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: 16px !important;
+}
+
+.card {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: var(--radius) !important;
+}
+
+.kpi-card {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: var(--radius) !important;
+}
+
+.kpi-card .value {
+	color: var(--accent) !important;
+	font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.kpi-card .label, .kpi-card .sub { color: var(--text-dim) !important; }
+
+.pill {
+	background: rgba(56,189,248,0.07) !important;
+	border: 1px solid rgba(56,189,248,0.18) !important;
+	color: var(--accent-soft) !important;
+}
+
+.note {
+	border-left-color: rgba(56,189,248,0.4) !important;
+	background: rgba(56,189,248,0.04) !important;
+	border-radius: 0 8px 8px 0 !important;
+}
+
+.caption { color: var(--text-dim) !important; }
+
+/* ---- Work page: job cards ---- */
+.job-card {
+	background: var(--surface) !important;
+	border-left: 3px solid var(--accent) !important;
+	border-radius: var(--radius) !important;
+	box-shadow: var(--shadow) !important;
+	transition: border-left-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.job-card:hover {
+	border-left-color: #7dd3fc !important;
+	box-shadow: var(--shadow-a) !important;
+	transform: translateY(-2px) !important;
+}
+
+.job-card h2 {
+	color: var(--text) !important;
+	font-size: 1.25rem !important;
+}
+
+.job-card p, .job-card ul, .job-card li {
+	color: var(--text-muted) !important;
+}
+
+.job-card i { color: var(--accent) !important; }
+
+/* ---- Conference page ---- */
+.certificate img {
+	border: 1px solid var(--border) !important;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.45) !important;
+	border-radius: 10px !important;
+	transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.certificate img:hover {
+	transform: scale(1.02) !important;
+	box-shadow: 0 8px 40px rgba(56,189,248,0.12) !important;
+}
+
+.desc { color: var(--text-muted) !important; }
+.summary { color: var(--text-muted) !important; }
+.summary strong { color: var(--text-muted) !important; }
+
+/* ---- Project pages: highlight/stat boxes ---- */
+.highlight-box, .highlight-section, .environment-box {
+	background: var(--surface) !important;
+	border-left: 3px solid var(--accent) !important;
+	border-radius: var(--radius) !important;
+}
+
+.highlight-box p, .highlight-section p, .environment-box p,
+.highlight-box h3, .highlight-section h3, .environment-box h3 {
+	color: var(--text-muted) !important;
+}
+
+.stat-card {
+	background: var(--surface) !important;
+	border-left: 3px solid var(--accent) !important;
+	border-radius: 8px !important;
+}
+
+.stat-card h3 { color: var(--text) !important; }
+.stat-card p { color: var(--text-muted) !important; }
+.stat-green { border-left-color: #34d399 !important; }
+.stat-yellow { border-left-color: #fbbf24 !important; }
+.stat-red { border-left-color: #f87171 !important; }
+
+/* ---- Project 5/6/7: card-3d ---- */
+.card-3d {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: var(--radius) !important;
+	box-shadow: var(--shadow) !important;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.card-3d:hover {
+	border-color: rgba(56,189,248,0.28) !important;
+	box-shadow: var(--shadow-a) !important;
+	transform: translateY(-3px) !important;
+}
+
+.card-3d h2 { color: var(--text) !important; }
+.card-3d p, .card-3d ul, .card-3d li, .card-3d figcaption {
+	color: var(--text-muted) !important;
+}
+
+/* ---- Project 5: img-3d ---- */
+.img-3d {
+	border: 1px solid var(--border) !important;
+	border-radius: 10px !important;
+	box-shadow: 0 6px 24px rgba(0,0,0,0.4) !important;
+	transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.img-3d:hover {
+	transform: scale(1.01) !important;
+	box-shadow: 0 10px 40px rgba(56,189,248,0.1) !important;
+}
+
+/* ---- Footer ---- */
+#footer, footer#footer {
+	background: #03070f !important;
+	border-top: 1px solid var(--border) !important;
+}
+
+#footer .menu, footer#footer .menu {
+	color: var(--text-dim) !important;
+	font-size: 0.78rem !important;
+}
+
+#footer .menu a, footer#footer .menu a {
+	color: var(--accent-soft) !important;
+	border-bottom: none !important;
+}
+
+#footer .menu a:hover, footer#footer .menu a:hover {
+	color: var(--accent) !important;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #03070f; }
+::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.22); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(56,189,248,0.42); }
+
+/* ---- Selection ---- */
+::selection { background: rgba(56,189,248,0.2); color: var(--text); }
