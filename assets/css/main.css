@@ -4760,3 +4760,118 @@ details summary:hover {
 /* ============================================================
    END PROFESSIONAL REDESIGN OVERRIDES
    ============================================================ */
+
+/* ============================================================
+   FINAL POLISH — Padding, Lists, Images, Section Rhythm
+   ============================================================ */
+
+/* --- Card padding for project content pages --- */
+.highlight-box,
+.highlight-section,
+.environment-box {
+  padding: 1.5rem 1.75rem !important;
+  margin: 0 0 2rem 0 !important;
+}
+
+.stat-card {
+  padding: 1.25rem 1.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.card-3d {
+  padding: 1.5rem 1.75rem !important;
+  margin: 0 0 1.75rem 0 !important;
+}
+
+/* --- List styles reset for content (base CSS sets list-style:none globally) --- */
+#main .inner ul:not(.actions):not(.menu):not(.features) {
+  list-style: disc !important;
+  padding-left: 1.35em !important;
+}
+
+#main .inner ol {
+  list-style: decimal !important;
+  padding-left: 1.35em !important;
+}
+
+#main .inner ul:not(.actions):not(.menu):not(.features) li,
+#main .inner ol li {
+  color: rgba(241, 245, 249, 0.72) !important;
+  margin-bottom: 0.45em !important;
+  line-height: 1.8 !important;
+}
+
+/* --- Icon accent color for headings in project pages --- */
+#main .inner h2 i,
+#main .inner h3 i {
+  color: #38bdf8 !important;
+  margin-right: 0.4em !important;
+}
+
+/* --- Images inside content that don't already have a special class --- */
+#main .inner img:not([class]),
+#main .inner img[style] {
+  border-radius: 10px !important;
+  border: 1px solid rgba(56, 189, 248, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.38) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+/* --- Better inner section padding on subpages (header layout) --- */
+#header + #wrapper #main.wrapper > .inner {
+  padding: 4em 3.5em 3em 3.5em !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+@media screen and (max-width: 980px) {
+  #header + #wrapper #main.wrapper > .inner {
+    padding: 3em 2em 2.5em 2em !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #header + #wrapper #main.wrapper > .inner {
+    padding: 2.5em 1.25em 2em 1.25em !important;
+  }
+}
+
+/* --- Section h2 headings in content: subtle underline separator --- */
+#main .inner h2 {
+  margin-top: 2.2em !important;
+  padding-bottom: 0.35em !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+
+#main .inner h1.major + h2,
+#main .inner h2:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* --- Note / callout box padding --- */
+.note {
+  padding: 0.9rem 1rem 0.9rem 1.25rem !important;
+  background: rgba(56, 189, 248, 0.04) !important;
+  border-radius: 0 8px 8px 0 !important;
+  margin: 0.75rem 0 1.5rem 0 !important;
+}
+
+/* --- Inner wrapper breathing room for features (skills page) --- */
+.features {
+  gap: 1.5em !important;
+}
+
+/* --- Certifications heading visual break --- */
+#main .inner h2[style*="margin-top"] {
+  padding-top: 0.5em !important;
+}
+
+/* --- Smooth anchor scrolling --- */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* ============================================================
+   END FINAL POLISH
+   ============================================================ */
